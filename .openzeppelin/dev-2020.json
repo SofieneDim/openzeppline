@@ -1,0 +1,495 @@
+{
+  "contracts": {
+    "Signup": {
+      "address": "0xa2e0e8155f158C033DF78fe3ACCE76cE8d2057F7",
+      "constructorCode": "608060405234801561001057600080fd5b5061563880620000216000396000f3fe",
+      "bodyBytecodeHash": "62424f261b541ccadee1d75a696c8b76b189c38a733243591e67534e9a431292",
+      "localBytecodeHash": "8c9b726a2e5c19758c7e4a5b22403f60a5163c11379bd5a0bcad7fbb8390eb57",
+      "deployedBytecodeHash": "8c9b726a2e5c19758c7e4a5b22403f60a5163c11379bd5a0bcad7fbb8390eb57",
+      "types": {
+        "t_struct<Signup.account>": {
+          "id": "t_struct<Signup.account>",
+          "kind": "struct",
+          "label": "Signup.account",
+          "members": [
+            {
+              "label": "id",
+              "astId": 4,
+              "type": "t_uint256",
+              "src": "115:10:0"
+            },
+            {
+              "label": "owner",
+              "astId": 6,
+              "type": "t_address",
+              "src": "135:13:0"
+            },
+            {
+              "label": "userName",
+              "astId": 8,
+              "type": "t_string",
+              "src": "158:15:0"
+            },
+            {
+              "label": "email",
+              "astId": 10,
+              "type": "t_string",
+              "src": "183:12:0"
+            },
+            {
+              "label": "phoneNumber",
+              "astId": 12,
+              "type": "t_string",
+              "src": "205:18:0"
+            },
+            {
+              "label": "phAddress",
+              "astId": 14,
+              "type": "t_string",
+              "src": "233:16:0"
+            },
+            {
+              "label": "password",
+              "astId": 16,
+              "type": "t_string",
+              "src": "259:15:0"
+            },
+            {
+              "label": "logoLink",
+              "astId": 18,
+              "type": "t_string",
+              "src": "284:15:0"
+            },
+            {
+              "label": "labo",
+              "astId": 20,
+              "type": "t_bool",
+              "src": "309:9:0"
+            }
+          ]
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        },
+        "t_string": {
+          "id": "t_string",
+          "kind": "elementary",
+          "label": "string"
+        },
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_mapping<t_struct<Signup.account>>": {
+          "id": "t_mapping<t_struct<Signup.account>>",
+          "valueType": "t_struct<Signup.account>",
+          "label": "mapping(key => Signup.account)",
+          "kind": "mapping"
+        },
+        "t_mapping<t_bool>": {
+          "id": "t_mapping<t_bool>",
+          "valueType": "t_bool",
+          "label": "mapping(key => bool)",
+          "kind": "mapping"
+        },
+        "t_struct<Signup.signupRequest>": {
+          "id": "t_struct<Signup.signupRequest>",
+          "kind": "struct",
+          "label": "Signup.signupRequest",
+          "members": [
+            {
+              "label": "owner",
+              "astId": 23,
+              "type": "t_address",
+              "src": "362:13:0"
+            },
+            {
+              "label": "id",
+              "astId": 25,
+              "type": "t_uint256",
+              "src": "385:10:0"
+            },
+            {
+              "label": "date",
+              "astId": 27,
+              "type": "t_string",
+              "src": "405:11:0"
+            },
+            {
+              "label": "name",
+              "astId": 29,
+              "type": "t_string",
+              "src": "426:11:0"
+            },
+            {
+              "label": "phAddress",
+              "astId": 31,
+              "type": "t_string",
+              "src": "447:16:0"
+            },
+            {
+              "label": "email",
+              "astId": 33,
+              "type": "t_string",
+              "src": "473:12:0"
+            },
+            {
+              "label": "phoneNumber",
+              "astId": 35,
+              "type": "t_string",
+              "src": "495:18:0"
+            },
+            {
+              "label": "password",
+              "astId": 37,
+              "type": "t_string",
+              "src": "523:15:0"
+            },
+            {
+              "label": "logoLink",
+              "astId": 39,
+              "type": "t_string",
+              "src": "548:15:0"
+            },
+            {
+              "label": "pending",
+              "astId": 41,
+              "type": "t_bool",
+              "src": "573:12:0"
+            },
+            {
+              "label": "approved",
+              "astId": 43,
+              "type": "t_bool",
+              "src": "595:13:0"
+            }
+          ]
+        },
+        "t_mapping<t_struct<Signup.signupRequest>>": {
+          "id": "t_mapping<t_struct<Signup.signupRequest>>",
+          "valueType": "t_struct<Signup.signupRequest>",
+          "label": "mapping(key => Signup.signupRequest)",
+          "kind": "mapping"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Signup",
+          "path": "contracts/Signup.sol",
+          "label": "accounts",
+          "astId": 48,
+          "type": "t_mapping<t_struct<Signup.account>>",
+          "src": "621:43:0"
+        },
+        {
+          "contract": "Signup",
+          "path": "contracts/Signup.sol",
+          "label": "adminAccounts",
+          "astId": 52,
+          "type": "t_mapping<t_bool>",
+          "src": "670:45:0"
+        },
+        {
+          "contract": "Signup",
+          "path": "contracts/Signup.sol",
+          "label": "signupRequestsId",
+          "astId": 56,
+          "type": "t_mapping<t_struct<Signup.signupRequest>>",
+          "src": "721:57:0"
+        },
+        {
+          "contract": "Signup",
+          "path": "contracts/Signup.sol",
+          "label": "signupRequestsAddress",
+          "astId": 60,
+          "type": "t_mapping<t_struct<Signup.signupRequest>>",
+          "src": "784:62:0"
+        },
+        {
+          "contract": "Signup",
+          "path": "contracts/Signup.sol",
+          "label": "accountsCounter",
+          "astId": 62,
+          "type": "t_uint256",
+          "src": "876:23:0"
+        },
+        {
+          "contract": "Signup",
+          "path": "contracts/Signup.sol",
+          "label": "signupRequestCounter",
+          "astId": 64,
+          "type": "t_uint256",
+          "src": "905:28:0"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    },
+    "Tracepic": {
+      "address": "0xE8dA5920ABdBA4BBdEe0426AFe7ff4b7af25dC5d",
+      "constructorCode": "608060405234801561001057600080fd5b50612116806100206000396000f3fe",
+      "bodyBytecodeHash": "42d92841363bca3e6fbeb12fa098359abc128385da51164f01e49c63dfff7a7e",
+      "localBytecodeHash": "d437a36c107093c96ad10b8c7b1634f1f463dbbed5e65bcedbdce420e839af7e",
+      "deployedBytecodeHash": "d437a36c107093c96ad10b8c7b1634f1f463dbbed5e65bcedbdce420e839af7e",
+      "types": {
+        "t_struct<Tracepic.analyse>": {
+          "id": "t_struct<Tracepic.analyse>",
+          "kind": "struct",
+          "label": "Tracepic.analyse",
+          "members": [
+            {
+              "label": "id",
+              "astId": 641,
+              "type": "t_uint256",
+              "src": "117:10:1"
+            },
+            {
+              "label": "seller",
+              "astId": 643,
+              "type": "t_address_payable",
+              "src": "137:22:1"
+            },
+            {
+              "label": "buyer",
+              "astId": 645,
+              "type": "t_address",
+              "src": "169:13:1"
+            },
+            {
+              "label": "analyseReference",
+              "astId": 647,
+              "type": "t_string",
+              "src": "192:23:1"
+            },
+            {
+              "label": "date",
+              "astId": 649,
+              "type": "t_string",
+              "src": "225:11:1"
+            },
+            {
+              "label": "value",
+              "astId": 651,
+              "type": "t_string",
+              "src": "246:12:1"
+            },
+            {
+              "label": "description",
+              "astId": 653,
+              "type": "t_string",
+              "src": "268:18:1"
+            },
+            {
+              "label": "price",
+              "astId": 655,
+              "type": "t_uint256",
+              "src": "296:13:1"
+            }
+          ]
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_address_payable": {
+          "id": "t_address_payable",
+          "kind": "elementary",
+          "label": "address payable"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        },
+        "t_string": {
+          "id": "t_string",
+          "kind": "elementary",
+          "label": "string"
+        },
+        "t_mapping<t_struct<Tracepic.analyse>>": {
+          "id": "t_mapping<t_struct<Tracepic.analyse>>",
+          "valueType": "t_struct<Tracepic.analyse>",
+          "label": "mapping(key => Tracepic.analyse)",
+          "kind": "mapping"
+        },
+        "t_struct<Tracepic.privateAnalyse>": {
+          "id": "t_struct<Tracepic.privateAnalyse>",
+          "kind": "struct",
+          "label": "Tracepic.privateAnalyse",
+          "members": [
+            {
+              "label": "id",
+              "astId": 658,
+              "type": "t_uint256",
+              "src": "354:10:1"
+            },
+            {
+              "label": "seller",
+              "astId": 660,
+              "type": "t_address_payable",
+              "src": "374:22:1"
+            },
+            {
+              "label": "buyer",
+              "astId": 662,
+              "type": "t_address",
+              "src": "406:13:1"
+            },
+            {
+              "label": "analyseReference",
+              "astId": 664,
+              "type": "t_string",
+              "src": "429:23:1"
+            },
+            {
+              "label": "date",
+              "astId": 666,
+              "type": "t_string",
+              "src": "462:11:1"
+            },
+            {
+              "label": "value",
+              "astId": 668,
+              "type": "t_string",
+              "src": "483:12:1"
+            },
+            {
+              "label": "description",
+              "astId": 670,
+              "type": "t_string",
+              "src": "505:18:1"
+            },
+            {
+              "label": "price",
+              "astId": 672,
+              "type": "t_uint256",
+              "src": "533:13:1"
+            },
+            {
+              "label": "owner",
+              "astId": 674,
+              "type": "t_address",
+              "src": "556:13:1"
+            }
+          ]
+        },
+        "t_mapping<t_struct<Tracepic.privateAnalyse>>": {
+          "id": "t_mapping<t_struct<Tracepic.privateAnalyse>>",
+          "valueType": "t_struct<Tracepic.privateAnalyse>",
+          "label": "mapping(key => Tracepic.privateAnalyse)",
+          "kind": "mapping"
+        },
+        "t_array:dyn<t_uint256>": {
+          "id": "t_array:dyn<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "dyn",
+          "kind": "array",
+          "label": "uint256[]"
+        },
+        "t_mapping<t_array:dyn<t_uint256>>": {
+          "id": "t_mapping<t_array:dyn<t_uint256>>",
+          "valueType": "t_array:dyn<t_uint256>",
+          "label": "mapping(key => uint256[])",
+          "kind": "mapping"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Tracepic",
+          "path": "contracts/Tracepic.sol",
+          "label": "publicAnalysis",
+          "astId": 679,
+          "type": "t_mapping<t_struct<Tracepic.analyse>>",
+          "src": "582:49:1"
+        },
+        {
+          "contract": "Tracepic",
+          "path": "contracts/Tracepic.sol",
+          "label": "privateAnalyses",
+          "astId": 683,
+          "type": "t_mapping<t_struct<Tracepic.privateAnalyse>>",
+          "src": "637:58:1"
+        },
+        {
+          "contract": "Tracepic",
+          "path": "contracts/Tracepic.sol",
+          "label": "privateAnalysesOwners",
+          "astId": 688,
+          "type": "t_mapping<t_array:dyn<t_uint256>>",
+          "src": "701:59:1"
+        },
+        {
+          "contract": "Tracepic",
+          "path": "contracts/Tracepic.sol",
+          "label": "publicAnalysesOwners",
+          "astId": 693,
+          "type": "t_mapping<t_array:dyn<t_uint256>>",
+          "src": "766:58:1"
+        },
+        {
+          "contract": "Tracepic",
+          "path": "contracts/Tracepic.sol",
+          "label": "publicAnalyseCounter",
+          "astId": 695,
+          "type": "t_uint256",
+          "src": "854:28:1"
+        },
+        {
+          "contract": "Tracepic",
+          "path": "contracts/Tracepic.sol",
+          "label": "privateAnalysesCounter",
+          "astId": 697,
+          "type": "t_uint256",
+          "src": "888:30:1"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    }
+  },
+  "solidityLibs": {},
+  "proxies": {
+    "Trimakus/Signup": [
+      {
+        "address": "0x67F97aA1975B3dA799D797226cF7d36190702B07",
+        "version": "1.0.0",
+        "implementation": "0xa2e0e8155f158C033DF78fe3ACCE76cE8d2057F7",
+        "admin": "0xC3e0d87F287049B3C31b2bAF4C054AC08ad6CC01",
+        "kind": "Upgradeable"
+      }
+    ],
+    "Trimakus/Tracepic": [
+      {
+        "address": "0x3F660aE033fc6a11b3c0888c3ca0A3eC718d078f",
+        "version": "1.0.0",
+        "implementation": "0xE8dA5920ABdBA4BBdEe0426AFe7ff4b7af25dC5d",
+        "admin": "0xC3e0d87F287049B3C31b2bAF4C054AC08ad6CC01",
+        "kind": "Upgradeable"
+      }
+    ]
+  },
+  "manifestVersion": "2.2",
+  "version": "1.0.0",
+  "proxyAdmin": {
+    "address": "0xC3e0d87F287049B3C31b2bAF4C054AC08ad6CC01"
+  }
+}
