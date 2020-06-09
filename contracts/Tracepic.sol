@@ -28,51 +28,51 @@ contract Tracepic {
 
     mapping(uint256 => analyse) public publicAnalysis;
     mapping(address => privateAnalyse) private privateAnalyses;
-    mapping(address => uint256[]) private privateAnalysesOwners;
     mapping(address => uint256[]) private publicAnalysesOwners;
+    mapping(address => uint256[]) private privateAnalysesOwners;
 
     // State variables
     uint256 publicAnalyseCounter;
     uint256 privateAnalysesCounter;
 
     // sell an analyse
-    // function postAnalyse(
-    //     string memory _analyseReference,
-    //     string memory _value,
-    //     string memory _date,
-    //     string memory _description,
-    //     uint256 _price,
-    //     address _owner
-    // ) public {
-    //     if (_owner != address(0)) {
-    //         privateAnalysesCounter++;
-    //         privateAnalysesOwners[msg.sender].push(privateAnalysesCounter);
-    //         privateAnalyses[_owner] = privateAnalyse(
-    //             privateAnalysesCounter,
-    //             msg.sender,
-    //             address(0),
-    //             _analyseReference,
-    //             _date,
-    //             _value,
-    //             _description,
-    //             _price,
-    //             _owner
-    //         );
-    //     } else {
-    //         publicAnalyseCounter++;
-    //         publicAnalysesOwners[msg.sender].push(publicAnalyseCounter);
-    //         publicAnalysis[publicAnalyseCounter] = analyse(
-    //             publicAnalyseCounter,
-    //             msg.sender,
-    //             address(0),
-    //             _analyseReference,
-    //             _date,
-    //             _value,
-    //             _description,
-    //             _price
-    //         );
-    //     }
-    // }
+    function postAnalyse(
+        string memory _analyseReference,
+        string memory _value,
+        string memory _date,
+        string memory _description,
+        uint256 _price,
+        address _owner
+    ) public {
+        if (_owner != address(0)) {
+            privateAnalysesCounter++;
+            privateAnalysesOwners[msg.sender].push(privateAnalysesCounter);
+            privateAnalyses[_owner] = privateAnalyse(
+                privateAnalysesCounter,
+                msg.sender,
+                address(0),
+                _analyseReference,
+                _date,
+                _value,
+                _description,
+                _price,
+                _owner
+            );
+        } else {
+            publicAnalyseCounter++;
+            publicAnalysesOwners[msg.sender].push(publicAnalyseCounter);
+            publicAnalysis[publicAnalyseCounter] = analyse(
+                publicAnalyseCounter,
+                msg.sender,
+                address(0),
+                _analyseReference,
+                _date,
+                _value,
+                _description,
+                _price
+            );
+        }
+    }
 
     // buy an analyse
     function buyAnalyse(uint256 _id) public payable {
@@ -138,6 +138,7 @@ contract Tracepic {
 
         // keep buyer's information
         analyseToBuy.buyer = msg.sender;
+        privateAnalyses[msg.sender].buyer = msg.sender;
 
         // the buyer can buy the analyse
         analyseToBuy.seller.transfer(msg.value);

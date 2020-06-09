@@ -232,8 +232,7 @@ contract Signup {
         string memory logoLink
     ) public {
         account memory userAccount = accounts[_id];
-        // require(userAccount.owner == msg.sender, "This is not your acccount");
-
+        //  require(userAccount.owner == msg.sender, "This is not your acccount");
         accounts[_id] = account(
             _id,
             userAccount.owner,

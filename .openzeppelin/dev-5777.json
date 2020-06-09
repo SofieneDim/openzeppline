@@ -1,7 +1,7 @@
 {
   "contracts": {
     "Signup": {
-      "address": "0x3F660aE033fc6a11b3c0888c3ca0A3eC718d078f",
+      "address": "0x005bC1ecd0bF64c77595Ff5E2B447c77fE19EBaa",
       "constructorCode": "608060405234801561001057600080fd5b5061563880620000216000396000f3fe",
       "bodyBytecodeHash": "62424f261b541ccadee1d75a696c8b76b189c38a733243591e67534e9a431292",
       "localBytecodeHash": "8c9b726a2e5c19758c7e4a5b22403f60a5163c11379bd5a0bcad7fbb8390eb57",
@@ -239,11 +239,11 @@
       }
     },
     "Tracepic": {
-      "address": "0x92249A5f6D580285F67C5a829b0F2E2625A3eF32",
-      "constructorCode": "608060405234801561001057600080fd5b50612850806100206000396000f3fe",
-      "bodyBytecodeHash": "870f08259309e65a16ee5b46cd9c297b5ad7b415b29c5d979dabb4afcb2987b6",
-      "localBytecodeHash": "d551744ef230ef886cc283360f145b4dbdfb5031d41a48827ada288796947259",
-      "deployedBytecodeHash": "d551744ef230ef886cc283360f145b4dbdfb5031d41a48827ada288796947259",
+      "address": "0x143aab6360Ee4289c4C43F9897d582539bC02D6c",
+      "constructorCode": "608060405234801561001057600080fd5b506127cf806100206000396000f3fe",
+      "bodyBytecodeHash": "b9ceecc6cd09361dcc7a5c327a29ba6ab01d79293cfca52ad4300d8515a1bd73",
+      "localBytecodeHash": "c443524a130521ced4b1741f388449b0888457ab1ab92de52c66346f6be91312",
+      "deployedBytecodeHash": "c443524a130521ced4b1741f388449b0888457ab1ab92de52c66346f6be91312",
       "types": {
         "t_struct<Tracepic.analyse>": {
           "id": "t_struct<Tracepic.analyse>",
@@ -462,26 +462,7 @@
         "hasSelfDestruct": false,
         "hasDelegateCall": false,
         "hasInitialValuesInDeclarations": false,
-        "uninitializedBaseContracts": [],
-        "storageUncheckedVars": [
-          {
-            "contract": "Tracepic",
-            "path": "contracts/Tracepic.sol",
-            "label": "publicAnalysis",
-            "astId": 768,
-            "type": "t_mapping<t_struct<Tracepic.analyse>>",
-            "src": "582:49:2"
-          },
-          {
-            "contract": "Tracepic",
-            "path": "contracts/Tracepic.sol",
-            "label": "privateAnalyses",
-            "astId": 772,
-            "type": "t_mapping<t_struct<Tracepic.privateAnalyse>>",
-            "src": "637:58:2"
-          }
-        ],
-        "storageDiff": []
+        "uninitializedBaseContracts": []
       }
     }
   },
@@ -489,19 +470,19 @@
   "proxies": {
     "Tracepic/Signup": [
       {
-        "address": "0x49DfF14f8308B1299837907fE654435D6dCDCE5C",
+        "address": "0xA18d020b178793cf52Bf0766bEce7f586C11D725",
         "version": "1.0.0",
-        "implementation": "0x3F660aE033fc6a11b3c0888c3ca0A3eC718d078f",
-        "admin": "0xc0B7c3019A249B762d9c2a039C412B326736B64D",
+        "implementation": "0x005bC1ecd0bF64c77595Ff5E2B447c77fE19EBaa",
+        "admin": "0x912ac6c01699BDEf401a47DFC86B97819e429D00",
         "kind": "Upgradeable"
       }
     ],
     "Tracepic/Tracepic": [
       {
-        "address": "0xAdECe5409873857E08C5dee87042B9C073DB409D",
+        "address": "0xD5dcE052E256f24ce8AB8A74e3B42bdD7dF5B962",
         "version": "1.0.0",
-        "implementation": "0x92249A5f6D580285F67C5a829b0F2E2625A3eF32",
-        "admin": "0xc0B7c3019A249B762d9c2a039C412B326736B64D",
+        "implementation": "0x143aab6360Ee4289c4C43F9897d582539bC02D6c",
+        "admin": "0x912ac6c01699BDEf401a47DFC86B97819e429D00",
         "kind": "Upgradeable"
       }
     ]
@@ -509,6 +490,6 @@
   "manifestVersion": "2.2",
   "version": "1.0.0",
   "proxyAdmin": {
-    "address": "0xc0B7c3019A249B762d9c2a039C412B326736B64D"
+    "address": "0x912ac6c01699BDEf401a47DFC86B97819e429D00"
   }
 }
