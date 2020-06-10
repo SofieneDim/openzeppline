@@ -35,6 +35,13 @@ contract Tracepic {
     uint256 publicAnalyseCounter;
     uint256 privateAnalysesCounter;
 
+    constructor() public {
+        postAnalyse("0", "0", "0", "0", 0, address(0));
+        // for (uint i = 0; i < 28; i++){
+        //     postAnalyse("byte(i)", "byte(i)", "byte(i)", "byte(i)", i, address(0));
+        // }
+    }
+
     // sell an analyse
     function postAnalyse(
         string memory _analyseReference,
@@ -144,12 +151,7 @@ contract Tracepic {
         analyseToBuy.seller.transfer(msg.value);
     }
 
-    // fetch the number of analyses in the contract
-    function getNumberOfAnalyses() public view returns (uint256) {
-        return publicAnalyseCounter;
-    }
-
-    function getAllAnalyses() public view returns (uint256[] memory) {
+    /*function getAllAnalyses() public view returns (uint256[] memory) {
         // we check whether there is at least one analyse
         if (publicAnalyseCounter == 0) {
             return new uint256[](0);
@@ -163,31 +165,33 @@ contract Tracepic {
             numberOfAnalyses++;
         }
         return analyseIds;
-    }
+    }*/
 
     // fetch and returns all analyse IDs available for sale
-    function getAnalysesForSale() public view returns (uint256[] memory) {
+    function getAnalysesForSale(uint256 lot)
+        public
+        view
+        returns (analyse[] memory)
+    {
         // we check whether there is at least one analyse
         if (publicAnalyseCounter == 0) {
-            return new uint256[](0);
+            return new analyse[](0);
         }
         // prepare output arrays
-        uint256[] memory analyseIds = new uint256[](publicAnalyseCounter);
+        analyse[] memory analysis = new analyse[](10);
         uint256 numberOfAnalysesForSale = 0;
-        // iterate over analyses
-        for (uint256 i = 1; i <= publicAnalyseCounter; i++) {
-            // keep only the ID for the analyse not already sold
-            if (publicAnalysis[i].buyer == address(0)) {
-                analyseIds[numberOfAnalysesForSale] = publicAnalysis[i].id;
-                numberOfAnalysesForSale++;
-            }
+        uint256 fromm = publicAnalyseCounter - (lot * 10) + 10;
+        uint256 to = 0;
+        if (fromm >= 9) {
+            to = fromm - 9;
+        } else {
+            to = 1;
         }
-        // copy the analyseIds array into the smaller forSale array
-        uint256[] memory forSale = new uint256[](numberOfAnalysesForSale);
-        for (uint256 j = 0; j < numberOfAnalysesForSale; j++) {
-            forSale[j] = analyseIds[j];
+        for (uint256 i = fromm; i >= to; i--) {
+            analysis[numberOfAnalysesForSale] = publicAnalysis[i];
+            numberOfAnalysesForSale++;
         }
-        return forSale;
+        return (analysis);
     }
 
     function getSelfPublicAnalyses() public view returns (uint256[] memory) {
