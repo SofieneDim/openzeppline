@@ -42,7 +42,7 @@ contract Tracepic {
     uint256 privateAnalysesCounter;
 
     function initContract() public {
-        postAnalyse("0", "0", "0", "0", 0, address(0));
+       // postAnalyse("0", "0", "0", "0", 0, address(0));
         /*for (uint i = 0; i < 28; i++){
             postAnalyse("byte(i)", "byte(i)", "byte(i)", "byte(i)", i, address(0));
         }*/
@@ -202,8 +202,10 @@ contract Tracepic {
             to = 1;
         }
         for (uint256 i = fromm; i >= to; i--) {
+            if (publicAnalysisById[i].analyseReference !== ""){
             analysis[numberOfAnalysesForSale] = publicAnalysisById[i];
             numberOfAnalysesForSale++;
+            }
         }
         return analysis;
     }
