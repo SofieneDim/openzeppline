@@ -239,11 +239,11 @@
       }
     },
     "Tracepic": {
-      "address": "0xa9c6E00B6Ec8579661080792204a8Bf72E75359c",
-      "constructorCode": "608060405234801561001057600080fd5b50615a2880620000216000396000f3fe",
-      "bodyBytecodeHash": "048aa0218ed87a9ef69628247a0dce3e790fa4ab7f1175aaa691c3214c2b0e29",
-      "localBytecodeHash": "3fd9d4429990af224d659c6eaaec5fe58c2843185ee9bd105d45a440ed26bc1a",
-      "deployedBytecodeHash": "3fd9d4429990af224d659c6eaaec5fe58c2843185ee9bd105d45a440ed26bc1a",
+      "address": "0xA652d72573efA557bA7b50A4B92f5Ed07eA57aE9",
+      "constructorCode": "608060405234801561001057600080fd5b50615ab880620000216000396000f3fe",
+      "bodyBytecodeHash": "93ad7022665a97f8c5091021bb4bb33fecb1c7e4c6ac7ca10cedaf494d9251ea",
+      "localBytecodeHash": "de7075802547fe47b354a745d5110f5eaa110ca990858f947ace88d38699e256",
+      "deployedBytecodeHash": "de7075802547fe47b354a745d5110f5eaa110ca990858f947ace88d38699e256",
       "types": {
         "t_struct<Tracepic.analyse>": {
           "id": "t_struct<Tracepic.analyse>",
@@ -590,14 +590,14 @@
       {
         "address": "0x17408327E634A2fA738D5aa50f9ea4DE8A9242D4",
         "version": "1.0.0",
-        "implementation": "0xa9c6E00B6Ec8579661080792204a8Bf72E75359c",
+        "implementation": "0xA652d72573efA557bA7b50A4B92f5Ed07eA57aE9",
         "admin": "0x942fc00dE643644b9C5420C0397c8D997B241ce3",
         "kind": "Upgradeable"
       },
       {
         "address": "0x0B3f69F3fEee6D54C8Bc338638A812FC3e1E8A25",
         "version": "1.0.0",
-        "implementation": "0xa9c6E00B6Ec8579661080792204a8Bf72E75359c",
+        "implementation": "0xA652d72573efA557bA7b50A4B92f5Ed07eA57aE9",
         "admin": "0x942fc00dE643644b9C5420C0397c8D997B241ce3",
         "kind": "Upgradeable"
       }
