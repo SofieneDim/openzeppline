@@ -26,10 +26,15 @@ contract Tracepic {
         address owner;
     }
 
-    mapping(uint256 => analyse) public publicAnalysis;
-    mapping(address => privateAnalyse) private privateAnalyses;
-    mapping(address => uint256[]) private publicAnalysesOwners;
-    mapping(address => uint256[]) private privateAnalysesOwners;
+    mapping(uint256 => analyse) public publicAnalysisById;
+    mapping(string => analyse) public publicAnalysisByRef;
+    mapping(address => uint256[]) private publicAnalysesPoster;
+    mapping(address => analyse[]) public publicAnalysisBuyer;
+
+    mapping(address => privateAnalyse[]) public privateAnalysisBuyer;
+    mapping(uint256 => privateAnalyse) private privateAnalyses;
+    mapping(address => privateAnalyse[]) private privateAnalysesOwner;
+    mapping(address => uint256[]) private privateAnalysesPoster;
 
     // State variables
     uint256 publicAnalyseCounter;
@@ -37,9 +42,9 @@ contract Tracepic {
 
     constructor() public {
         postAnalyse("0", "0", "0", "0", 0, address(0));
-        // for (uint i = 0; i < 28; i++){
-        //     postAnalyse("byte(i)", "byte(i)", "byte(i)", "byte(i)", i, address(0));
-        // }
+        /*for (uint i = 0; i < 28; i++){
+            postAnalyse("byte(i)", "byte(i)", "byte(i)", "byte(i)", i, address(0));
+        }*/
     }
 
     // sell an analyse
@@ -53,22 +58,50 @@ contract Tracepic {
     ) public {
         if (_owner != address(0)) {
             privateAnalysesCounter++;
-            privateAnalysesOwners[msg.sender].push(privateAnalysesCounter);
-            privateAnalyses[_owner] = privateAnalyse(
-                privateAnalysesCounter,
+
+            privateAnalysesPoster[msg.sender].push(privateAnalysesCounter);
+
+            privateAnalyses[privateAnalysesCounter] = (
+                privateAnalyse(
+                    privateAnalysesCounter,
+                    msg.sender,
+                    address(0),
+                    _analyseReference,
+                    _date,
+                    _value,
+                    _description,
+                    _price,
+                    _owner
+                )
+            );
+
+            privateAnalysesOwner[_owner].push(
+                privateAnalyse(
+                    privateAnalysesCounter,
+                    msg.sender,
+                    address(0),
+                    _analyseReference,
+                    _date,
+                    _value,
+                    _description,
+                    _price,
+                    _owner
+                )
+            );
+        } else {
+            publicAnalyseCounter++;
+            publicAnalysesPoster[msg.sender].push(publicAnalyseCounter);
+            publicAnalysisById[publicAnalyseCounter] = analyse(
+                publicAnalyseCounter,
                 msg.sender,
                 address(0),
                 _analyseReference,
                 _date,
                 _value,
                 _description,
-                _price,
-                _owner
+                _price
             );
-        } else {
-            publicAnalyseCounter++;
-            publicAnalysesOwners[msg.sender].push(publicAnalyseCounter);
-            publicAnalysis[publicAnalyseCounter] = analyse(
+            publicAnalysisByRef[_analyseReference] = analyse(
                 publicAnalyseCounter,
                 msg.sender,
                 address(0),
@@ -94,19 +127,15 @@ contract Tracepic {
             _id > 0 && _id <= publicAnalyseCounter,
             "analyse with this id does not exist"
         );
-
         // we retrieve the analyse
-        analyse storage analyseToBuy = publicAnalysis[_id];
-
+        analyse storage analyseToBuy = publicAnalysisById[_id];
         // we check whether the analyse has not already been sold
         require(analyseToBuy.buyer == address(0), "analyse was already sold");
-
         // we don't allow the seller to buy his/her own analyse
         require(
             analyseToBuy.seller != msg.sender,
             "Seller cannot buy his own analyse"
         );
-
         // we check whether the value sent corresponds to the analyse price
         require(
             analyseToBuy.price == msg.value,
@@ -116,56 +145,40 @@ contract Tracepic {
         // keep buyer's information
         analyseToBuy.buyer = msg.sender;
 
+        publicAnalysisBuyer[msg.sender].push(analyseToBuy);
         // the buyer can buy the analyse
         analyseToBuy.seller.transfer(msg.value);
     }
 
     // buy a private analyse
-    function buyPrivateAnalyse() public payable {
+    function buyPrivateAnalyse(uint256 analyseId) public payable {
         // we retrieve the analyse
-        privateAnalyse memory analyseToBuy = privateAnalyses[msg.sender];
-
+        privateAnalyse memory analyseToBuy = privateAnalyses[analyseId];
         // we check whether the analyse exists
         require(analyseToBuy.seller != address(0), "Analyze not found!");
-
         // we check whether the analyse has not already been sold
         require(analyseToBuy.buyer == address(0), "analyse was already sold");
-
         // we don't allow the seller to buy his/her own analyse
         require(
             analyseToBuy.seller != msg.sender,
             "Seller cannot buy his own analyse"
         );
-
         // we check whether the value sent corresponds to the analyse price
         require(
             analyseToBuy.price == msg.value,
             "Value provided does not match price of analyse"
         );
 
+        require(analyseToBuy.owner == msg.sender, "You are not owner");
+
         // keep buyer's information
         analyseToBuy.buyer = msg.sender;
-        privateAnalyses[msg.sender].buyer = msg.sender;
 
+        privateAnalyses[analyseId].buyer = msg.sender;
+        privateAnalysisBuyer[msg.sender].push(analyseToBuy);
         // the buyer can buy the analyse
         analyseToBuy.seller.transfer(msg.value);
     }
-
-    /*function getAllAnalyses() public view returns (uint256[] memory) {
-        // we check whether there is at least one analyse
-        if (publicAnalyseCounter == 0) {
-            return new uint256[](0);
-        }
-        // prepare output arrays
-        uint256[] memory analyseIds = new uint256[](publicAnalyseCounter);
-        uint256 numberOfAnalyses = 0;
-        // iterate over analyses
-        for (uint256 i = 1; i <= publicAnalyseCounter; i++) {
-            analyseIds[numberOfAnalyses] = publicAnalysis[i].id;
-            numberOfAnalyses++;
-        }
-        return analyseIds;
-    }*/
 
     // fetch and returns all analyse IDs available for sale
     function getAnalysesForSale(uint256 lot)
@@ -188,44 +201,49 @@ contract Tracepic {
             to = 1;
         }
         for (uint256 i = fromm; i >= to; i--) {
-            analysis[numberOfAnalysesForSale] = publicAnalysis[i];
+            analysis[numberOfAnalysesForSale] = publicAnalysisById[i];
             numberOfAnalysesForSale++;
         }
-        return (analysis);
+        return analysis;
     }
 
-    function getSelfPublicAnalyses() public view returns (uint256[] memory) {
-        return publicAnalysesOwners[msg.sender];
+    function getSelfPostedPublicAnalyses()
+        public
+        view
+        returns (uint256[] memory)
+    {
+        return publicAnalysesPoster[msg.sender];
     }
 
-    function getSelfPrivateAnalyses() public view returns (uint256[] memory) {
-        return privateAnalysesOwners[msg.sender];
+    function getSelfPostedPrivateAnalyses()
+        public
+        view
+        returns (uint256[] memory)
+    {
+        return privateAnalysesPoster[msg.sender];
+    }
+
+    function getSelfBoughtAnalyses()
+        public
+        view
+        returns (analyse[] memory publicA, privateAnalyse[] memory privateA)
+    {
+        return (
+            publicAnalysisBuyer[msg.sender],
+            privateAnalysisBuyer[msg.sender]
+        );
     }
 
     function getAnalyseByReference(string memory _reference)
         public
         view
-        returns (uint256 id)
+        returns (analyse memory)
     {
-        for (uint256 i = 1; i <= publicAnalyseCounter; i++) {
-            if (
-                keccak256(
-                    abi.encodePacked(publicAnalysis[i].analyseReference)
-                ) == keccak256(abi.encodePacked(_reference))
-            ) {
-                return publicAnalysis[i].id;
-            }
-        }
+        return publicAnalysisByRef[_reference];
     }
 
-    function getPrivateAnalyse(address _address)
-        public
-        view
-        returns (privateAnalyse memory _privateAnalyse)
-    {
-        privateAnalyse memory _analyse = privateAnalyses[_address];
-        //  bool condition = msg.sender == _analyse.owner || msg.sender == _analyse.seller;
-        //   require(condition, 'You cannot access this analyse');
+    function getPrivateAnalyse() public view returns (privateAnalyse[] memory) {
+        privateAnalyse[] memory _analyse = privateAnalysesOwner[msg.sender];
         return _analyse;
     }
 }
