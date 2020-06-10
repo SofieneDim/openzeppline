@@ -247,13 +247,17 @@ contract Tracepic {
             analysis.length
         );
         uint256 counter = 0;
-        for (uint256 i = 0; i <= analysis.length; i++) {
+        for (uint256 i = 0; i < analysis.length; i++) {
             if (analysis[i].seller == msg.sender) {
                 postedAnalysis[counter] = analysis[i];
+                counter++;
             }
         }
-
-        return postedAnalysis;
+        privateAnalyse[] memory finalAnalysis = new privateAnalyse[](counter);
+        for (uint256 i = 0; i < counter; i++) {
+            finalAnalysis[i] = postedAnalysis[i];
+        }
+        return finalAnalysis;
     }
 
     function getSelfBoughtAnalysis()
