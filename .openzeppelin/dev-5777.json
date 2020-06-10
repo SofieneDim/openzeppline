@@ -1,7 +1,7 @@
 {
   "contracts": {
     "Signup": {
-      "address": "0x005bC1ecd0bF64c77595Ff5E2B447c77fE19EBaa",
+      "address": "0x00E4e572ff9EB72F15C05c1D5867A56DCFdeD6E9",
       "constructorCode": "608060405234801561001057600080fd5b5061563880620000216000396000f3fe",
       "bodyBytecodeHash": "62424f261b541ccadee1d75a696c8b76b189c38a733243591e67534e9a431292",
       "localBytecodeHash": "8c9b726a2e5c19758c7e4a5b22403f60a5163c11379bd5a0bcad7fbb8390eb57",
@@ -239,11 +239,11 @@
       }
     },
     "Tracepic": {
-      "address": "0x143aab6360Ee4289c4C43F9897d582539bC02D6c",
-      "constructorCode": "608060405234801561001057600080fd5b506127cf806100206000396000f3fe",
-      "bodyBytecodeHash": "b9ceecc6cd09361dcc7a5c327a29ba6ab01d79293cfca52ad4300d8515a1bd73",
-      "localBytecodeHash": "c443524a130521ced4b1741f388449b0888457ab1ab92de52c66346f6be91312",
-      "deployedBytecodeHash": "c443524a130521ced4b1741f388449b0888457ab1ab92de52c66346f6be91312",
+      "address": "0xa9c6E00B6Ec8579661080792204a8Bf72E75359c",
+      "constructorCode": "608060405234801561001057600080fd5b50615a2880620000216000396000f3fe",
+      "bodyBytecodeHash": "048aa0218ed87a9ef69628247a0dce3e790fa4ab7f1175aaa691c3214c2b0e29",
+      "localBytecodeHash": "3fd9d4429990af224d659c6eaaec5fe58c2843185ee9bd105d45a440ed26bc1a",
+      "deployedBytecodeHash": "3fd9d4429990af224d659c6eaaec5fe58c2843185ee9bd105d45a440ed26bc1a",
       "types": {
         "t_struct<Tracepic.analyse>": {
           "id": "t_struct<Tracepic.analyse>",
@@ -252,49 +252,49 @@
           "members": [
             {
               "label": "id",
-              "astId": 730,
+              "astId": 765,
               "type": "t_uint256",
               "src": "117:10:2"
             },
             {
               "label": "seller",
-              "astId": 732,
+              "astId": 767,
               "type": "t_address_payable",
               "src": "137:22:2"
             },
             {
               "label": "buyer",
-              "astId": 734,
+              "astId": 769,
               "type": "t_address",
               "src": "169:13:2"
             },
             {
               "label": "analyseReference",
-              "astId": 736,
+              "astId": 771,
               "type": "t_string",
               "src": "192:23:2"
             },
             {
               "label": "date",
-              "astId": 738,
+              "astId": 773,
               "type": "t_string",
               "src": "225:11:2"
             },
             {
               "label": "value",
-              "astId": 740,
+              "astId": 775,
               "type": "t_string",
               "src": "246:12:2"
             },
             {
               "label": "description",
-              "astId": 742,
+              "astId": 777,
               "type": "t_string",
               "src": "268:18:2"
             },
             {
               "label": "price",
-              "astId": 744,
+              "astId": 779,
               "type": "t_uint256",
               "src": "296:13:2"
             }
@@ -326,73 +326,6 @@
           "label": "mapping(key => Tracepic.analyse)",
           "kind": "mapping"
         },
-        "t_struct<Tracepic.privateAnalyse>": {
-          "id": "t_struct<Tracepic.privateAnalyse>",
-          "kind": "struct",
-          "label": "Tracepic.privateAnalyse",
-          "members": [
-            {
-              "label": "id",
-              "astId": 747,
-              "type": "t_uint256",
-              "src": "354:10:2"
-            },
-            {
-              "label": "seller",
-              "astId": 749,
-              "type": "t_address_payable",
-              "src": "374:22:2"
-            },
-            {
-              "label": "buyer",
-              "astId": 751,
-              "type": "t_address",
-              "src": "406:13:2"
-            },
-            {
-              "label": "analyseReference",
-              "astId": 753,
-              "type": "t_string",
-              "src": "429:23:2"
-            },
-            {
-              "label": "date",
-              "astId": 755,
-              "type": "t_string",
-              "src": "462:11:2"
-            },
-            {
-              "label": "value",
-              "astId": 757,
-              "type": "t_string",
-              "src": "483:12:2"
-            },
-            {
-              "label": "description",
-              "astId": 759,
-              "type": "t_string",
-              "src": "505:18:2"
-            },
-            {
-              "label": "price",
-              "astId": 761,
-              "type": "t_uint256",
-              "src": "533:13:2"
-            },
-            {
-              "label": "owner",
-              "astId": 763,
-              "type": "t_address",
-              "src": "556:13:2"
-            }
-          ]
-        },
-        "t_mapping<t_struct<Tracepic.privateAnalyse>>": {
-          "id": "t_mapping<t_struct<Tracepic.privateAnalyse>>",
-          "valueType": "t_struct<Tracepic.privateAnalyse>",
-          "label": "mapping(key => Tracepic.privateAnalyse)",
-          "kind": "mapping"
-        },
         "t_array:dyn<t_uint256>": {
           "id": "t_array:dyn<t_uint256>",
           "valueType": "t_uint256",
@@ -405,56 +338,181 @@
           "valueType": "t_array:dyn<t_uint256>",
           "label": "mapping(key => uint256[])",
           "kind": "mapping"
+        },
+        "t_array:dyn<t_struct<Tracepic.analyse>>": {
+          "id": "t_array:dyn<t_struct<Tracepic.analyse>>",
+          "valueType": "t_struct<Tracepic.analyse>",
+          "length": "dyn",
+          "kind": "array",
+          "label": "Tracepic.analyse[]"
+        },
+        "t_mapping<t_array:dyn<t_struct<Tracepic.analyse>>>": {
+          "id": "t_mapping<t_array:dyn<t_struct<Tracepic.analyse>>>",
+          "valueType": "t_array:dyn<t_struct<Tracepic.analyse>>",
+          "label": "mapping(key => Tracepic.analyse[])",
+          "kind": "mapping"
+        },
+        "t_struct<Tracepic.privateAnalyse>": {
+          "id": "t_struct<Tracepic.privateAnalyse>",
+          "kind": "struct",
+          "label": "Tracepic.privateAnalyse",
+          "members": [
+            {
+              "label": "id",
+              "astId": 782,
+              "type": "t_uint256",
+              "src": "354:10:2"
+            },
+            {
+              "label": "seller",
+              "astId": 784,
+              "type": "t_address_payable",
+              "src": "374:22:2"
+            },
+            {
+              "label": "buyer",
+              "astId": 786,
+              "type": "t_address",
+              "src": "406:13:2"
+            },
+            {
+              "label": "analyseReference",
+              "astId": 788,
+              "type": "t_string",
+              "src": "429:23:2"
+            },
+            {
+              "label": "date",
+              "astId": 790,
+              "type": "t_string",
+              "src": "462:11:2"
+            },
+            {
+              "label": "value",
+              "astId": 792,
+              "type": "t_string",
+              "src": "483:12:2"
+            },
+            {
+              "label": "description",
+              "astId": 794,
+              "type": "t_string",
+              "src": "505:18:2"
+            },
+            {
+              "label": "price",
+              "astId": 796,
+              "type": "t_uint256",
+              "src": "533:13:2"
+            },
+            {
+              "label": "owner",
+              "astId": 798,
+              "type": "t_address",
+              "src": "556:13:2"
+            }
+          ]
+        },
+        "t_mapping<t_struct<Tracepic.privateAnalyse>>": {
+          "id": "t_mapping<t_struct<Tracepic.privateAnalyse>>",
+          "valueType": "t_struct<Tracepic.privateAnalyse>",
+          "label": "mapping(key => Tracepic.privateAnalyse)",
+          "kind": "mapping"
+        },
+        "t_array:dyn<t_struct<Tracepic.privateAnalyse>>": {
+          "id": "t_array:dyn<t_struct<Tracepic.privateAnalyse>>",
+          "valueType": "t_struct<Tracepic.privateAnalyse>",
+          "length": "dyn",
+          "kind": "array",
+          "label": "Tracepic.privateAnalyse[]"
+        },
+        "t_mapping<t_array:dyn<t_struct<Tracepic.privateAnalyse>>>": {
+          "id": "t_mapping<t_array:dyn<t_struct<Tracepic.privateAnalyse>>>",
+          "valueType": "t_array:dyn<t_struct<Tracepic.privateAnalyse>>",
+          "label": "mapping(key => Tracepic.privateAnalyse[])",
+          "kind": "mapping"
         }
       },
       "storage": [
         {
           "contract": "Tracepic",
           "path": "contracts/Tracepic.sol",
-          "label": "publicAnalysis",
-          "astId": 768,
+          "label": "publicAnalysisById",
+          "astId": 803,
           "type": "t_mapping<t_struct<Tracepic.analyse>>",
-          "src": "582:49:2"
+          "src": "582:53:2"
         },
         {
           "contract": "Tracepic",
           "path": "contracts/Tracepic.sol",
-          "label": "privateAnalyses",
-          "astId": 772,
+          "label": "publicAnalysisByRef",
+          "astId": 807,
+          "type": "t_mapping<t_struct<Tracepic.analyse>>",
+          "src": "641:53:2"
+        },
+        {
+          "contract": "Tracepic",
+          "path": "contracts/Tracepic.sol",
+          "label": "publicAnalysesPoster",
+          "astId": 812,
+          "type": "t_mapping<t_array:dyn<t_uint256>>",
+          "src": "700:58:2"
+        },
+        {
+          "contract": "Tracepic",
+          "path": "contracts/Tracepic.sol",
+          "label": "publicAnalysisBuyer",
+          "astId": 817,
+          "type": "t_mapping<t_array:dyn<t_struct<Tracepic.analyse>>>",
+          "src": "764:56:2"
+        },
+        {
+          "contract": "Tracepic",
+          "path": "contracts/Tracepic.sol",
+          "label": "privateAnalysis",
+          "astId": 821,
           "type": "t_mapping<t_struct<Tracepic.privateAnalyse>>",
-          "src": "637:58:2"
+          "src": "827:58:2"
         },
         {
           "contract": "Tracepic",
           "path": "contracts/Tracepic.sol",
-          "label": "publicAnalysesOwners",
-          "astId": 777,
-          "type": "t_mapping<t_array:dyn<t_uint256>>",
-          "src": "701:58:2"
+          "label": "privateAnalysisBuyer",
+          "astId": 826,
+          "type": "t_mapping<t_array:dyn<t_struct<Tracepic.privateAnalyse>>>",
+          "src": "892:64:2"
         },
         {
           "contract": "Tracepic",
           "path": "contracts/Tracepic.sol",
-          "label": "privateAnalysesOwners",
-          "astId": 782,
+          "label": "privateAnalysesOwner",
+          "astId": 831,
+          "type": "t_mapping<t_array:dyn<t_struct<Tracepic.privateAnalyse>>>",
+          "src": "962:65:2"
+        },
+        {
+          "contract": "Tracepic",
+          "path": "contracts/Tracepic.sol",
+          "label": "privateAnalysesPoster",
+          "astId": 836,
           "type": "t_mapping<t_array:dyn<t_uint256>>",
-          "src": "765:59:2"
+          "src": "1033:59:2"
         },
         {
           "contract": "Tracepic",
           "path": "contracts/Tracepic.sol",
           "label": "publicAnalyseCounter",
-          "astId": 784,
+          "astId": 838,
           "type": "t_uint256",
-          "src": "854:28:2"
+          "src": "1122:28:2"
         },
         {
           "contract": "Tracepic",
           "path": "contracts/Tracepic.sol",
           "label": "privateAnalysesCounter",
-          "astId": 786,
+          "astId": 840,
           "type": "t_uint256",
-          "src": "888:30:2"
+          "src": "1156:30:2"
         }
       ],
       "warnings": {
@@ -462,7 +520,58 @@
         "hasSelfDestruct": false,
         "hasDelegateCall": false,
         "hasInitialValuesInDeclarations": false,
-        "uninitializedBaseContracts": []
+        "uninitializedBaseContracts": [],
+        "storageUncheckedVars": [
+          {
+            "contract": "Tracepic",
+            "path": "contracts/Tracepic.sol",
+            "label": "publicAnalysisById",
+            "astId": 803,
+            "type": "t_mapping<t_struct<Tracepic.analyse>>",
+            "src": "582:53:2"
+          },
+          {
+            "contract": "Tracepic",
+            "path": "contracts/Tracepic.sol",
+            "label": "publicAnalysisByRef",
+            "astId": 807,
+            "type": "t_mapping<t_struct<Tracepic.analyse>>",
+            "src": "641:53:2"
+          },
+          {
+            "contract": "Tracepic",
+            "path": "contracts/Tracepic.sol",
+            "label": "publicAnalysisBuyer",
+            "astId": 817,
+            "type": "t_mapping<t_array:dyn<t_struct<Tracepic.analyse>>>",
+            "src": "764:56:2"
+          },
+          {
+            "contract": "Tracepic",
+            "path": "contracts/Tracepic.sol",
+            "label": "privateAnalysis",
+            "astId": 821,
+            "type": "t_mapping<t_struct<Tracepic.privateAnalyse>>",
+            "src": "827:58:2"
+          },
+          {
+            "contract": "Tracepic",
+            "path": "contracts/Tracepic.sol",
+            "label": "privateAnalysisBuyer",
+            "astId": 826,
+            "type": "t_mapping<t_array:dyn<t_struct<Tracepic.privateAnalyse>>>",
+            "src": "892:64:2"
+          },
+          {
+            "contract": "Tracepic",
+            "path": "contracts/Tracepic.sol",
+            "label": "privateAnalysesOwner",
+            "astId": 831,
+            "type": "t_mapping<t_array:dyn<t_struct<Tracepic.privateAnalyse>>>",
+            "src": "962:65:2"
+          }
+        ],
+        "storageDiff": []
       }
     }
   },
@@ -470,19 +579,26 @@
   "proxies": {
     "Tracepic/Signup": [
       {
-        "address": "0xA18d020b178793cf52Bf0766bEce7f586C11D725",
+        "address": "0xB14C62839f19C17DdC9F7A6C600614181f51f910",
         "version": "1.0.0",
-        "implementation": "0x005bC1ecd0bF64c77595Ff5E2B447c77fE19EBaa",
-        "admin": "0x912ac6c01699BDEf401a47DFC86B97819e429D00",
+        "implementation": "0x00E4e572ff9EB72F15C05c1D5867A56DCFdeD6E9",
+        "admin": "0x942fc00dE643644b9C5420C0397c8D997B241ce3",
         "kind": "Upgradeable"
       }
     ],
     "Tracepic/Tracepic": [
       {
-        "address": "0xD5dcE052E256f24ce8AB8A74e3B42bdD7dF5B962",
+        "address": "0x17408327E634A2fA738D5aa50f9ea4DE8A9242D4",
         "version": "1.0.0",
-        "implementation": "0x143aab6360Ee4289c4C43F9897d582539bC02D6c",
-        "admin": "0x912ac6c01699BDEf401a47DFC86B97819e429D00",
+        "implementation": "0xa9c6E00B6Ec8579661080792204a8Bf72E75359c",
+        "admin": "0x942fc00dE643644b9C5420C0397c8D997B241ce3",
+        "kind": "Upgradeable"
+      },
+      {
+        "address": "0x0B3f69F3fEee6D54C8Bc338638A812FC3e1E8A25",
+        "version": "1.0.0",
+        "implementation": "0xa9c6E00B6Ec8579661080792204a8Bf72E75359c",
+        "admin": "0x942fc00dE643644b9C5420C0397c8D997B241ce3",
         "kind": "Upgradeable"
       }
     ]
@@ -490,6 +606,6 @@
   "manifestVersion": "2.2",
   "version": "1.0.0",
   "proxyAdmin": {
-    "address": "0x912ac6c01699BDEf401a47DFC86B97819e429D00"
+    "address": "0x942fc00dE643644b9C5420C0397c8D997B241ce3"
   }
 }

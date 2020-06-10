@@ -31,8 +31,9 @@ contract Tracepic {
     mapping(address => uint256[]) private publicAnalysesPoster;
     mapping(address => analyse[]) public publicAnalysisBuyer;
 
+    mapping(uint256 => privateAnalyse) private privateAnalysis;
+
     mapping(address => privateAnalyse[]) public privateAnalysisBuyer;
-    mapping(uint256 => privateAnalyse) private privateAnalyses;
     mapping(address => privateAnalyse[]) private privateAnalysesOwner;
     mapping(address => uint256[]) private privateAnalysesPoster;
 
@@ -40,7 +41,7 @@ contract Tracepic {
     uint256 publicAnalyseCounter;
     uint256 privateAnalysesCounter;
 
-    constructor() public {
+    function initContract() public {
         postAnalyse("0", "0", "0", "0", 0, address(0));
         /*for (uint i = 0; i < 28; i++){
             postAnalyse("byte(i)", "byte(i)", "byte(i)", "byte(i)", i, address(0));
@@ -61,7 +62,7 @@ contract Tracepic {
 
             privateAnalysesPoster[msg.sender].push(privateAnalysesCounter);
 
-            privateAnalyses[privateAnalysesCounter] = (
+            privateAnalysis[privateAnalysesCounter] = (
                 privateAnalyse(
                     privateAnalysesCounter,
                     msg.sender,
@@ -153,7 +154,7 @@ contract Tracepic {
     // buy a private analyse
     function buyPrivateAnalyse(uint256 analyseId) public payable {
         // we retrieve the analyse
-        privateAnalyse memory analyseToBuy = privateAnalyses[analyseId];
+        privateAnalyse memory analyseToBuy = privateAnalysis[analyseId];
         // we check whether the analyse exists
         require(analyseToBuy.seller != address(0), "Analyze not found!");
         // we check whether the analyse has not already been sold
@@ -174,7 +175,7 @@ contract Tracepic {
         // keep buyer's information
         analyseToBuy.buyer = msg.sender;
 
-        privateAnalyses[analyseId].buyer = msg.sender;
+        privateAnalysis[analyseId].buyer = msg.sender;
         privateAnalysisBuyer[msg.sender].push(analyseToBuy);
         // the buyer can buy the analyse
         analyseToBuy.seller.transfer(msg.value);
@@ -207,7 +208,7 @@ contract Tracepic {
         return analysis;
     }
 
-    function getSelfPostedPublicAnalyses()
+    function getSelfPostedPublicAnalysisIds()
         public
         view
         returns (uint256[] memory)
@@ -215,7 +216,7 @@ contract Tracepic {
         return publicAnalysesPoster[msg.sender];
     }
 
-    function getSelfPostedPrivateAnalyses()
+    function getSelfPostedPrivateAnalysisIds()
         public
         view
         returns (uint256[] memory)
@@ -223,7 +224,39 @@ contract Tracepic {
         return privateAnalysesPoster[msg.sender];
     }
 
-    function getSelfBoughtAnalyses()
+    function getSelfPostedPrivateAnalyse(uint256 analyseId)
+        public
+        view
+        returns (privateAnalyse memory)
+    {
+        privateAnalyse memory _analyse = privateAnalysis[analyseId];
+        require(
+            _analyse.seller == msg.sender,
+            "This is a private analyse, and you are not the owner"
+        );
+        return _analyse;
+    }
+
+    function getSelfPostedPrivateAnalyseByAddress(address owner)
+        public
+        view
+        returns (privateAnalyse[] memory)
+    {
+        privateAnalyse[] memory analysis = privateAnalysesOwner[owner];
+        privateAnalyse[] memory postedAnalysis = new privateAnalyse[](
+            analysis.length
+        );
+        uint256 counter = 0;
+        for (uint256 i = 0; i <= analysis.length; i++) {
+            if (analysis[i].seller == msg.sender) {
+                postedAnalysis[counter] = analysis[i];
+            }
+        }
+
+        return postedAnalysis;
+    }
+
+    function getSelfBoughtAnalysis()
         public
         view
         returns (analyse[] memory publicA, privateAnalyse[] memory privateA)
