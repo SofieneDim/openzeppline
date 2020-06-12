@@ -26,23 +26,22 @@ contract Tracepic {
         address owner;
     }
 
-    mapping(uint256 => analyse) public publicAnalysisById;
     mapping(string => analyse) public publicAnalysisByRef;
-    mapping(address => uint256[]) private publicAnalysesPoster;
+    mapping(uint256 => analyse) public publicAnalysisById;
     mapping(address => analyse[]) public publicAnalysisBuyer;
+    mapping(address => uint256[]) private publicAnalysesPoster;
 
     mapping(uint256 => privateAnalyse) private privateAnalysis;
-
+    mapping(address => uint256[]) private privateAnalysesPoster;
     mapping(address => privateAnalyse[]) public privateAnalysisBuyer;
     mapping(address => privateAnalyse[]) private privateAnalysesOwner;
-    mapping(address => uint256[]) private privateAnalysesPoster;
 
     // State variables
     uint256 publicAnalyseCounter;
     uint256 privateAnalysesCounter;
 
     function initContract() public {
-       // postAnalyse("0", "0", "0", "0", 0, address(0));
+        // postAnalyse("0", "0", "0", "0", 0, address(0));
         /*for (uint i = 0; i < 28; i++){
             postAnalyse("byte(i)", "byte(i)", "byte(i)", "byte(i)", i, address(0));
         }*/
@@ -145,6 +144,7 @@ contract Tracepic {
 
         // keep buyer's information
         analyseToBuy.buyer = msg.sender;
+        publicAnalysisById[_id].buyer = msg.sender;
 
         publicAnalysisBuyer[msg.sender].push(analyseToBuy);
         // the buyer can buy the analyse
@@ -174,6 +174,13 @@ contract Tracepic {
 
         // keep buyer's information
         analyseToBuy.buyer = msg.sender;
+        privateAnalysis[analyseId].buyer = msg.sender;
+
+        for (uint256 i = 0; i < privateAnalysesOwner[msg.sender].length; i++) {
+            if (privateAnalysesOwner[msg.sender][i].id == analyseId) {
+                privateAnalysesOwner[msg.sender][i].buyer = msg.sender;
+            }
+        }
 
         privateAnalysis[analyseId].buyer = msg.sender;
         privateAnalysisBuyer[msg.sender].push(analyseToBuy);
@@ -202,10 +209,8 @@ contract Tracepic {
             to = 1;
         }
         for (uint256 i = fromm; i >= to; i--) {
-            if (publicAnalysisById[i].analyseReference !== ""){
             analysis[numberOfAnalysesForSale] = publicAnalysisById[i];
             numberOfAnalysesForSale++;
-            }
         }
         return analysis;
     }
