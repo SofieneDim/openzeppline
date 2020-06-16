@@ -1,7 +1,7 @@
 {
   "contracts": {
     "Signup": {
-      "address": "0x92249A5f6D580285F67C5a829b0F2E2625A3eF32",
+      "address": "0x7EE9CAE5689353AdfAa584A668e6828Ab4FE7399",
       "constructorCode": "608060405234801561001057600080fd5b5061563880620000216000396000f3fe",
       "bodyBytecodeHash": "62424f261b541ccadee1d75a696c8b76b189c38a733243591e67534e9a431292",
       "localBytecodeHash": "8c9b726a2e5c19758c7e4a5b22403f60a5163c11379bd5a0bcad7fbb8390eb57",
@@ -239,7 +239,7 @@
       }
     },
     "Tracepic": {
-      "address": "0x47CEC4feF1010100bcd683fE5cdf860f9fc4C71F",
+      "address": "0xa79c71acEC51C55b8869883EbbdC016cDAd82eDa",
       "constructorCode": "608060405234801561001057600080fd5b50615bde80620000216000396000f3fe",
       "bodyBytecodeHash": "1ba5f55924b047429fd358c9bf2ff3c60c1397430f06919e27ee3d5defc18c3d",
       "localBytecodeHash": "4edf48ac302380f930597ff7f168abb8025d37f2c0cf8be7a4bb45e07c12a903",
@@ -520,83 +520,27 @@
         "hasSelfDestruct": false,
         "hasDelegateCall": false,
         "hasInitialValuesInDeclarations": false,
-        "uninitializedBaseContracts": [],
-        "storageUncheckedVars": [
-          {
-            "contract": "Tracepic",
-            "path": "contracts/Tracepic.sol",
-            "label": "publicAnalysisByRef",
-            "astId": 803,
-            "type": "t_mapping<t_struct<Tracepic.analyse>>",
-            "src": "582:53:2"
-          },
-          {
-            "contract": "Tracepic",
-            "path": "contracts/Tracepic.sol",
-            "label": "publicAnalysisById",
-            "astId": 807,
-            "type": "t_mapping<t_struct<Tracepic.analyse>>",
-            "src": "641:53:2"
-          },
-          {
-            "contract": "Tracepic",
-            "path": "contracts/Tracepic.sol",
-            "label": "publicAnalysisBuyer",
-            "astId": 812,
-            "type": "t_mapping<t_array:dyn<t_struct<Tracepic.analyse>>>",
-            "src": "700:56:2"
-          },
-          {
-            "contract": "Tracepic",
-            "path": "contracts/Tracepic.sol",
-            "label": "privateAnalysis",
-            "astId": 821,
-            "type": "t_mapping<t_struct<Tracepic.privateAnalyse>>",
-            "src": "827:58:2"
-          },
-          {
-            "contract": "Tracepic",
-            "path": "contracts/Tracepic.sol",
-            "label": "privateAnalysisBuyer",
-            "astId": 831,
-            "type": "t_mapping<t_array:dyn<t_struct<Tracepic.privateAnalyse>>>",
-            "src": "956:64:2"
-          },
-          {
-            "contract": "Tracepic",
-            "path": "contracts/Tracepic.sol",
-            "label": "privateAnalysesOwner",
-            "astId": 836,
-            "type": "t_mapping<t_array:dyn<t_struct<Tracepic.privateAnalyse>>>",
-            "src": "1026:65:2"
-          }
-        ],
-        "storageDiff": []
+        "uninitializedBaseContracts": []
       }
     }
   },
   "solidityLibs": {},
   "proxies": {
-    "Tracepic/Signup": [
+    "Trimakus/Signup": [
       {
-        "address": "0x315d57fa24A05B6e247F0a3fe920bD37889E017B",
+        "address": "0xF8EC0Ef7675f10c7dB955f2D7ffcb595aa1ee72f",
         "version": "1.0.0",
-        "implementation": "0x92249A5f6D580285F67C5a829b0F2E2625A3eF32",
-        "admin": "0x2AE4c5964593fCA494B6674BC779Fc5605DA5bC7",
+        "implementation": "0x7EE9CAE5689353AdfAa584A668e6828Ab4FE7399",
+        "admin": "0x2B41E82e2Ea2b5C52e8891bb5487Df87D0391cE9",
         "kind": "Upgradeable"
       }
     ],
-    "Tracepic/Tracepic": [
+    "Trimakus/Tracepic": [
       {
-        "address": "0x74d69617a9949dE4a4A0A5C0898d7c71D97ee01c",
-        "kind": "NonProxy",
-        "bytecodeHash": "3dece7ca87d23e2b32f879ab94ab0e9ccaa75e58e945e0c41e6d8a82fe8833a2"
-      },
-      {
-        "address": "0xF5C8930B2aAEc982F2ff25bDFdACaee428E34F0B",
+        "address": "0x3b43B6Ec034AF52cd10C592F15829dD7C06DDcc4",
         "version": "1.0.0",
-        "implementation": "0x47CEC4feF1010100bcd683fE5cdf860f9fc4C71F",
-        "admin": "0x2AE4c5964593fCA494B6674BC779Fc5605DA5bC7",
+        "implementation": "0xa79c71acEC51C55b8869883EbbdC016cDAd82eDa",
+        "admin": "0x2B41E82e2Ea2b5C52e8891bb5487Df87D0391cE9",
         "kind": "Upgradeable"
       }
     ]
@@ -604,6 +548,6 @@
   "manifestVersion": "2.2",
   "version": "1.0.0",
   "proxyAdmin": {
-    "address": "0x2AE4c5964593fCA494B6674BC779Fc5605DA5bC7"
+    "address": "0x2B41E82e2Ea2b5C52e8891bb5487Df87D0391cE9"
   }
 }
