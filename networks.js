@@ -5,7 +5,7 @@ module.exports = {
       host: 'localhost',
       port: 8545,
       gas: 999999999,
-      gasPrice: 5e9,
+      gasPrice: 0,
       networkId: '*',
     },
     Ganache: {
@@ -13,7 +13,7 @@ module.exports = {
       host: 'localhost',
       port: 7545,
       gas: 999999999,
-      gasPrice: 5e9,
+      gasPrice: 0,
       networkId: '*',
     },
   },

@@ -1,7 +1,6 @@
 pragma experimental ABIEncoderV2;
 pragma solidity >0.4.99 <0.6.0;
 
-
 contract Signup {
     struct account {
         uint256 id;
@@ -31,8 +30,8 @@ contract Signup {
 
     mapping(uint256 => account) public accounts;
     mapping(address => bool) public adminAccounts;
-    mapping(uint256 => signupRequest) public signupRequestsId;
-    mapping(address => signupRequest) public signupRequestsAddress;
+    mapping(uint256 => signupRequest) private signupRequestsId;
+    mapping(address => signupRequest) private signupRequestsAddress;
 
     // State variables
     uint256 accountsCounter;
@@ -197,10 +196,21 @@ contract Signup {
     }
 
     function getSignupRequestCounter() public view returns (uint256) {
+        require(adminAccounts[msg.sender], "You are not admin");
         return signupRequestCounter;
     }
 
+    function getSignupRequest(uint256 requestId)
+        public
+        view
+        returns (signupRequest memory)
+    {
+        require(adminAccounts[msg.sender], "You are not admin");
+        return signupRequestsId[requestId];
+    }
+
     function getSignupRequestPending() public view returns (uint256[] memory) {
+        require(adminAccounts[msg.sender], "You are not admin");
         if (signupRequestCounter == 0) {
             return new uint256[](0);
         }

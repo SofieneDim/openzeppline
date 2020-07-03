@@ -1,7 +1,6 @@
 pragma experimental ABIEncoderV2;
 pragma solidity >0.4.99 <0.6.0;
 
-
 contract Tracepic {
     struct analyse {
         uint256 id;
@@ -31,7 +30,7 @@ contract Tracepic {
     mapping(address => analyse[]) public publicAnalysisBuyer;
     mapping(address => uint256[]) private publicAnalysesPoster;
 
-    mapping(uint256 => privateAnalyse) private privateAnalysis;
+    mapping(uint256 => privateAnalyse) public privateAnalysis;
     mapping(address => uint256[]) private privateAnalysesPoster;
     mapping(address => privateAnalyse[]) public privateAnalysisBuyer;
     mapping(address => privateAnalyse[]) private privateAnalysesOwner;
@@ -39,13 +38,6 @@ contract Tracepic {
     // State variables
     uint256 publicAnalyseCounter;
     uint256 privateAnalysesCounter;
-
-    function initContract() public {
-        // postAnalyse("0", "0", "0", "0", 0, address(0));
-        /*for (uint i = 0; i < 28; i++){
-            postAnalyse("byte(i)", "byte(i)", "byte(i)", "byte(i)", i, address(0));
-        }*/
-    }
 
     // sell an analyse
     function postAnalyse(
@@ -289,5 +281,9 @@ contract Tracepic {
     function getPrivateAnalyse() public view returns (privateAnalyse[] memory) {
         privateAnalyse[] memory _analyse = privateAnalysesOwner[msg.sender];
         return _analyse;
+    }
+
+    function getPrivateAnalysisIds() public view returns (uint256 counter) {
+        return privateAnalysesCounter;
     }
 }
