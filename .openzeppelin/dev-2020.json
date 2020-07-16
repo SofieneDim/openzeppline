@@ -239,7 +239,7 @@
       }
     },
     "Tracepic": {
-      "address": "0xdBEDe1e82c13c85dE96B8067F5Aa7ED528A6Ede7",
+      "address": "0xFC4808F7bc1f4d8013268a40b9c27a62655f2443",
       "constructorCode": "608060405234801561001057600080fd5b50615f7380620000216000396000f3fe",
       "bodyBytecodeHash": "365ddadcd3625f6b30e4be0982c42338776ad7c9b21806ffbe877b810062d511",
       "localBytecodeHash": "5a9568a08b47dacb86b0681485419ce4254b70dd465da7c73fae68200732b2a5",
@@ -520,58 +520,7 @@
         "hasSelfDestruct": false,
         "hasDelegateCall": false,
         "hasInitialValuesInDeclarations": false,
-        "uninitializedBaseContracts": [],
-        "storageUncheckedVars": [
-          {
-            "contract": "Tracepic",
-            "path": "contracts/Tracepic.sol",
-            "label": "publicAnalysisByRef",
-            "astId": 715,
-            "type": "t_mapping<t_struct<Tracepic.analyse>>",
-            "src": "581:53:1"
-          },
-          {
-            "contract": "Tracepic",
-            "path": "contracts/Tracepic.sol",
-            "label": "publicAnalysisById",
-            "astId": 719,
-            "type": "t_mapping<t_struct<Tracepic.analyse>>",
-            "src": "640:53:1"
-          },
-          {
-            "contract": "Tracepic",
-            "path": "contracts/Tracepic.sol",
-            "label": "publicAnalysisBuyer",
-            "astId": 724,
-            "type": "t_mapping<t_array:dyn<t_struct<Tracepic.analyse>>>",
-            "src": "699:56:1"
-          },
-          {
-            "contract": "Tracepic",
-            "path": "contracts/Tracepic.sol",
-            "label": "privateAnalysis",
-            "astId": 733,
-            "type": "t_mapping<t_struct<Tracepic.privateAnalyse>>",
-            "src": "826:57:1"
-          },
-          {
-            "contract": "Tracepic",
-            "path": "contracts/Tracepic.sol",
-            "label": "privateAnalysisBuyer",
-            "astId": 743,
-            "type": "t_mapping<t_array:dyn<t_struct<Tracepic.privateAnalyse>>>",
-            "src": "954:64:1"
-          },
-          {
-            "contract": "Tracepic",
-            "path": "contracts/Tracepic.sol",
-            "label": "privateAnalysesOwner",
-            "astId": 748,
-            "type": "t_mapping<t_array:dyn<t_struct<Tracepic.privateAnalyse>>>",
-            "src": "1024:65:1"
-          }
-        ],
-        "storageDiff": []
+        "uninitializedBaseContracts": []
       }
     }
   },
@@ -590,7 +539,7 @@
       {
         "address": "0x399bB2a6aC6FAe88921cdd35DDa5058376f5015C",
         "version": "1.0.0",
-        "implementation": "0xdBEDe1e82c13c85dE96B8067F5Aa7ED528A6Ede7",
+        "implementation": "0xFC4808F7bc1f4d8013268a40b9c27a62655f2443",
         "admin": "0xc56C2c59b81BF5d29D8b00f2008cb34016bB4760",
         "kind": "Upgradeable"
       }

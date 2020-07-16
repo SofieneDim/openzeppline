@@ -284,6 +284,7 @@ contract Tracepic {
     }
 
     function getPrivateAnalysisIds() public view returns (uint256 counter) {
+        // must check if it is admin
         return privateAnalysesCounter;
     }
 }
