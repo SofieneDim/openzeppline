@@ -1,7 +1,7 @@
 pragma experimental ABIEncoderV2;
 pragma solidity >0.4.99 <0.6.0;
 
-contract Signup {
+contract Authentication {
     struct account {
         uint256 id;
         address owner;

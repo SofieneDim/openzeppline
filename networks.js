@@ -4,7 +4,7 @@ module.exports = {
       protocol: 'http',
       host: 'localhost',
       port: 8545,
-      gas: 999999999,
+      gas: 99999999999,
       gasPrice: 0,
       networkId: '*',
     },

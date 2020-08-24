@@ -534,15 +534,6 @@
         "admin": "0xc56C2c59b81BF5d29D8b00f2008cb34016bB4760",
         "kind": "Upgradeable"
       }
-    ],
-    "Trimakus/Tracepic": [
-      {
-        "address": "0x399bB2a6aC6FAe88921cdd35DDa5058376f5015C",
-        "version": "1.0.0",
-        "implementation": "0xFC4808F7bc1f4d8013268a40b9c27a62655f2443",
-        "admin": "0xc56C2c59b81BF5d29D8b00f2008cb34016bB4760",
-        "kind": "Upgradeable"
-      }
     ]
   },
   "manifestVersion": "2.2",
