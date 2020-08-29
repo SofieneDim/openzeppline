@@ -56,7 +56,7 @@ pragma solidity >0.4.99 <0.6.0;
     function addNewAnalyseToCycle(
     address client, uint256 analyseId, string memory _reference, 
     string memory date, string memory value, string memory description
-    ) public {
+    ) public returns (bool isComplete) {
         cycle memory _cycle = cycles[client];
         uint256[] memory _analysisIds = _cycle.analysisIds;
         analysisCounter++;
@@ -68,8 +68,8 @@ pragma solidity >0.4.99 <0.6.0;
         _analysisIds[_cycle.analysisIdsCounter] = analysisCounter;
         _cycle.analysisIdsCounter++;
         cycles[client] = _cycle;
+        return (_cycle.analysisIdsCounter == _cycle.cycleTimes);
     }
-    
     
     /*  "0x0A03a6e8Ccb2562aeEF3CE7F63f22f444E116850", 3, 12, 1, "ref", "date", "val", "desc"  */
      /* "0x0A03a6e8Ccb2562aeEF3CE7F63f22f444E116850", 2, "ref", "date", "val", "desc"  */
