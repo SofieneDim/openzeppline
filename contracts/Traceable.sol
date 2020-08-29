@@ -1,100 +1,77 @@
 pragma experimental ABIEncoderV2;
 pragma solidity >0.4.99 <0.6.0;
 
-contract Authentication {
-    struct analyse {
+  contract drageableAnalysis {
+      
+      struct analyse {
         uint256 id;
         string analyseReference;
         string date;
         string value;
         string description;
     }
-
+    
     struct cycle {
         uint256 id;
-        address owner;
         address payable seller;
-        uint256 cycleTimes;
-        uint256[] analysisIds;
-        bool completed;
+        address buyer;
         uint256 price;
+        uint256 cycleTimes;
+        uint256 analysisIdsCounter;
+        uint256[] analysisIds;
     }
-
+    
+    mapping(address => cycle) cycles;
+    mapping(uint256 => analyse) analysis;
+    
     uint256 cyclesCounter;
     uint256 analysisCounter;
-
-    mapping(address => cycle[]) private cycles;
-    mapping(uint256 => analyse) private analysisById;
-
-    function addCycle(
-        uint256 cycleTimes,
-        uint256 price,
-        address owner,
-        string memory value,
-        string memory analyseReference,
-        string memory date,
-        string memory description
+    
+    function getCycle(address owner) public view returns (cycle memory result){
+        return cycles[owner];
+    }
+  
+    function addNewCycle(address client, uint256 cycleTimes, uint256 price, 
+        uint256 firstAnalyseId, string memory _reference, string memory date, string memory value, string memory description
     ) public {
         cyclesCounter++;
         analysisCounter++;
-
-        analysisById[analysisCounter] = analyse(
-            analysisCounter,
-            analyseReference,
-            date,
-            value,
-            description
-        );
-        uint256[] memory _value = new uint256[](1);
-        _value[0] = analysisCounter;
-
-        cycles[owner].push(
-            cycle(
+        analyse memory firstAnalyse = analyse(
+            firstAnalyseId, _reference, date, value, description
+            );
+        analysis[analysisCounter] = firstAnalyse;
+        uint256[] memory _analysis = new uint256[](cycleTimes);
+        _analysis[0] = firstAnalyseId;
+        cycles[client] = cycle(
                 cyclesCounter,
-                owner,
                 msg.sender,
+                client,
+                price,
                 cycleTimes,
-                _value,
-                false,
-                price
-            )
-        );
+                1,
+                _analysis
+            );
     }
-
-    function addAnalyse(
-        string memory value,
-        address owner,
-        uint256 analyseId,
-        string memory analyseReference,
-        string memory date,
-        string memory description
+  
+    function addNewAnalyseToCycle(
+    address client, uint256 analyseId, string memory _reference, 
+    string memory date, string memory value, string memory description
     ) public {
+        cycle memory _cycle = cycles[client];
+        uint256[] memory _analysisIds = _cycle.analysisIds;
         analysisCounter++;
-        analysisById[analysisCounter] = analyse(
-            analyseId,
-            analyseReference,
-            date,
-            value,
-            description
-        );
-        for (uint256 i = 0; i <= cycles[owner].length; i++) {
-            if (cycles[owner][i].id == analyseId) {
-                cycles[owner][i].analysisIds.push(analyseId);
-            }
-        }
+        
+        
+        analysis[analysisCounter] = analyse(analyseId, _reference, date, value, description );
+        
+        
+        _analysisIds[_cycle.analysisIdsCounter] = analysisCounter;
+        _cycle.analysisIdsCounter++;
+        cycles[client] = _cycle;
     }
-
-    function getCycles() public view returns (cycle[] memory) {
-        if (cycles[msg.sender].length > 0) {
-            cycle[] memory _cycles = new cycle[](cycles[msg.sender].length);
-            uint256 counter = 0;
-            for (uint256 i = 0; i <= cycles[msg.sender].length; i++) {
-                if (!cycles[msg.sender][i].completed) {
-                    _cycles[counter] = (cycles[msg.sender][i]);
-                }
-            }
-            return cycles[msg.sender];
-        }
-        return new cycle[](0);
-    }
+    
+    
+    /*  "0x0A03a6e8Ccb2562aeEF3CE7F63f22f444E116850", 3, 12, 1, "ref", "date", "val", "desc"  */
+     /* "0x0A03a6e8Ccb2562aeEF3CE7F63f22f444E116850", 2, "ref", "date", "val", "desc"  */
+  
 }
