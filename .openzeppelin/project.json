@@ -1,11 +1,11 @@
 {
   "manifestVersion": "2.2",
   "contracts": {
-    "Signup": "Signup",
+    "TraceableAnalysis": "TraceableAnalysis",
     "Tracepic": "Tracepic"
   },
   "dependencies": {},
-  "name": "Trimakus",
+  "name": "oz",
   "version": "1.0.0",
   "compiler": {
     "compilerSettings": {

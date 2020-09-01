@@ -1,245 +1,7 @@
 {
   "contracts": {
-    "Signup": {
-      "address": "0xeCA24A9947a87163976390D6B036aC148ACe1710",
-      "constructorCode": "608060405234801561001057600080fd5b506153a6806100206000396000f3fe",
-      "bodyBytecodeHash": "d07e1331cd546e17df58dda29b9b837e10e9ff2e3a154f8157aa3fbf088ccfdf",
-      "localBytecodeHash": "44578906b30844ebe7528ce45de0000a74c69497e2c59eb6f04dececcd7eb7a7",
-      "deployedBytecodeHash": "44578906b30844ebe7528ce45de0000a74c69497e2c59eb6f04dececcd7eb7a7",
-      "types": {
-        "t_struct<Signup.account>": {
-          "id": "t_struct<Signup.account>",
-          "kind": "struct",
-          "label": "Signup.account",
-          "members": [
-            {
-              "label": "id",
-              "astId": 4,
-              "type": "t_uint256",
-              "src": "114:10:0"
-            },
-            {
-              "label": "owner",
-              "astId": 6,
-              "type": "t_address",
-              "src": "134:13:0"
-            },
-            {
-              "label": "userName",
-              "astId": 8,
-              "type": "t_string",
-              "src": "157:15:0"
-            },
-            {
-              "label": "email",
-              "astId": 10,
-              "type": "t_string",
-              "src": "182:12:0"
-            },
-            {
-              "label": "phoneNumber",
-              "astId": 12,
-              "type": "t_string",
-              "src": "204:18:0"
-            },
-            {
-              "label": "phAddress",
-              "astId": 14,
-              "type": "t_string",
-              "src": "232:16:0"
-            },
-            {
-              "label": "password",
-              "astId": 16,
-              "type": "t_string",
-              "src": "258:15:0"
-            },
-            {
-              "label": "logoLink",
-              "astId": 18,
-              "type": "t_string",
-              "src": "283:15:0"
-            },
-            {
-              "label": "labo",
-              "astId": 20,
-              "type": "t_bool",
-              "src": "308:9:0"
-            }
-          ]
-        },
-        "t_uint256": {
-          "id": "t_uint256",
-          "kind": "elementary",
-          "label": "uint256"
-        },
-        "t_address": {
-          "id": "t_address",
-          "kind": "elementary",
-          "label": "address"
-        },
-        "t_string": {
-          "id": "t_string",
-          "kind": "elementary",
-          "label": "string"
-        },
-        "t_bool": {
-          "id": "t_bool",
-          "kind": "elementary",
-          "label": "bool"
-        },
-        "t_mapping<t_struct<Signup.account>>": {
-          "id": "t_mapping<t_struct<Signup.account>>",
-          "valueType": "t_struct<Signup.account>",
-          "label": "mapping(key => Signup.account)",
-          "kind": "mapping"
-        },
-        "t_mapping<t_bool>": {
-          "id": "t_mapping<t_bool>",
-          "valueType": "t_bool",
-          "label": "mapping(key => bool)",
-          "kind": "mapping"
-        },
-        "t_struct<Signup.signupRequest>": {
-          "id": "t_struct<Signup.signupRequest>",
-          "kind": "struct",
-          "label": "Signup.signupRequest",
-          "members": [
-            {
-              "label": "owner",
-              "astId": 23,
-              "type": "t_address",
-              "src": "361:13:0"
-            },
-            {
-              "label": "id",
-              "astId": 25,
-              "type": "t_uint256",
-              "src": "384:10:0"
-            },
-            {
-              "label": "date",
-              "astId": 27,
-              "type": "t_string",
-              "src": "404:11:0"
-            },
-            {
-              "label": "name",
-              "astId": 29,
-              "type": "t_string",
-              "src": "425:11:0"
-            },
-            {
-              "label": "phAddress",
-              "astId": 31,
-              "type": "t_string",
-              "src": "446:16:0"
-            },
-            {
-              "label": "email",
-              "astId": 33,
-              "type": "t_string",
-              "src": "472:12:0"
-            },
-            {
-              "label": "phoneNumber",
-              "astId": 35,
-              "type": "t_string",
-              "src": "494:18:0"
-            },
-            {
-              "label": "password",
-              "astId": 37,
-              "type": "t_string",
-              "src": "522:15:0"
-            },
-            {
-              "label": "logoLink",
-              "astId": 39,
-              "type": "t_string",
-              "src": "547:15:0"
-            },
-            {
-              "label": "pending",
-              "astId": 41,
-              "type": "t_bool",
-              "src": "572:12:0"
-            },
-            {
-              "label": "approved",
-              "astId": 43,
-              "type": "t_bool",
-              "src": "594:13:0"
-            }
-          ]
-        },
-        "t_mapping<t_struct<Signup.signupRequest>>": {
-          "id": "t_mapping<t_struct<Signup.signupRequest>>",
-          "valueType": "t_struct<Signup.signupRequest>",
-          "label": "mapping(key => Signup.signupRequest)",
-          "kind": "mapping"
-        }
-      },
-      "storage": [
-        {
-          "contract": "Signup",
-          "path": "contracts/Signup.sol",
-          "label": "accounts",
-          "astId": 48,
-          "type": "t_mapping<t_struct<Signup.account>>",
-          "src": "620:43:0"
-        },
-        {
-          "contract": "Signup",
-          "path": "contracts/Signup.sol",
-          "label": "adminAccounts",
-          "astId": 52,
-          "type": "t_mapping<t_bool>",
-          "src": "669:45:0"
-        },
-        {
-          "contract": "Signup",
-          "path": "contracts/Signup.sol",
-          "label": "signupRequestsId",
-          "astId": 56,
-          "type": "t_mapping<t_struct<Signup.signupRequest>>",
-          "src": "720:58:0"
-        },
-        {
-          "contract": "Signup",
-          "path": "contracts/Signup.sol",
-          "label": "signupRequestsAddress",
-          "astId": 60,
-          "type": "t_mapping<t_struct<Signup.signupRequest>>",
-          "src": "784:63:0"
-        },
-        {
-          "contract": "Signup",
-          "path": "contracts/Signup.sol",
-          "label": "accountsCounter",
-          "astId": 62,
-          "type": "t_uint256",
-          "src": "877:23:0"
-        },
-        {
-          "contract": "Signup",
-          "path": "contracts/Signup.sol",
-          "label": "signupRequestCounter",
-          "astId": 64,
-          "type": "t_uint256",
-          "src": "906:28:0"
-        }
-      ],
-      "warnings": {
-        "hasConstructor": false,
-        "hasSelfDestruct": false,
-        "hasDelegateCall": false,
-        "hasInitialValuesInDeclarations": false,
-        "uninitializedBaseContracts": []
-      }
-    },
     "Tracepic": {
-      "address": "0xFC4808F7bc1f4d8013268a40b9c27a62655f2443",
+      "address": "0x172b35Ddd2b60c83eA6Cd09d88F8F71D573898f4",
       "constructorCode": "608060405234801561001057600080fd5b50615f7380620000216000396000f3fe",
       "bodyBytecodeHash": "365ddadcd3625f6b30e4be0982c42338776ad7c9b21806ffbe877b810062d511",
       "localBytecodeHash": "5a9568a08b47dacb86b0681485419ce4254b70dd465da7c73fae68200732b2a5",
@@ -252,51 +14,51 @@
           "members": [
             {
               "label": "id",
-              "astId": 677,
+              "astId": 872,
               "type": "t_uint256",
-              "src": "116:10:1"
+              "src": "116:10:2"
             },
             {
               "label": "seller",
-              "astId": 679,
+              "astId": 874,
               "type": "t_address_payable",
-              "src": "136:22:1"
+              "src": "136:22:2"
             },
             {
               "label": "buyer",
-              "astId": 681,
+              "astId": 876,
               "type": "t_address",
-              "src": "168:13:1"
+              "src": "168:13:2"
             },
             {
               "label": "analyseReference",
-              "astId": 683,
+              "astId": 878,
               "type": "t_string",
-              "src": "191:23:1"
+              "src": "191:23:2"
             },
             {
               "label": "date",
-              "astId": 685,
+              "astId": 880,
               "type": "t_string",
-              "src": "224:11:1"
+              "src": "224:11:2"
             },
             {
               "label": "value",
-              "astId": 687,
+              "astId": 882,
               "type": "t_string",
-              "src": "245:12:1"
+              "src": "245:12:2"
             },
             {
               "label": "description",
-              "astId": 689,
+              "astId": 884,
               "type": "t_string",
-              "src": "267:18:1"
+              "src": "267:18:2"
             },
             {
               "label": "price",
-              "astId": 691,
+              "astId": 886,
               "type": "t_uint256",
-              "src": "295:13:1"
+              "src": "295:13:2"
             }
           ]
         },
@@ -359,57 +121,57 @@
           "members": [
             {
               "label": "id",
-              "astId": 694,
+              "astId": 889,
               "type": "t_uint256",
-              "src": "353:10:1"
+              "src": "353:10:2"
             },
             {
               "label": "seller",
-              "astId": 696,
+              "astId": 891,
               "type": "t_address_payable",
-              "src": "373:22:1"
+              "src": "373:22:2"
             },
             {
               "label": "buyer",
-              "astId": 698,
+              "astId": 893,
               "type": "t_address",
-              "src": "405:13:1"
+              "src": "405:13:2"
             },
             {
               "label": "analyseReference",
-              "astId": 700,
+              "astId": 895,
               "type": "t_string",
-              "src": "428:23:1"
+              "src": "428:23:2"
             },
             {
               "label": "date",
-              "astId": 702,
+              "astId": 897,
               "type": "t_string",
-              "src": "461:11:1"
+              "src": "461:11:2"
             },
             {
               "label": "value",
-              "astId": 704,
+              "astId": 899,
               "type": "t_string",
-              "src": "482:12:1"
+              "src": "482:12:2"
             },
             {
               "label": "description",
-              "astId": 706,
+              "astId": 901,
               "type": "t_string",
-              "src": "504:18:1"
+              "src": "504:18:2"
             },
             {
               "label": "price",
-              "astId": 708,
+              "astId": 903,
               "type": "t_uint256",
-              "src": "532:13:1"
+              "src": "532:13:2"
             },
             {
               "label": "owner",
-              "astId": 710,
+              "astId": 905,
               "type": "t_address",
-              "src": "555:13:1"
+              "src": "555:13:2"
             }
           ]
         },
@@ -438,81 +200,267 @@
           "contract": "Tracepic",
           "path": "contracts/Tracepic.sol",
           "label": "publicAnalysisByRef",
-          "astId": 715,
+          "astId": 910,
           "type": "t_mapping<t_struct<Tracepic.analyse>>",
-          "src": "581:53:1"
+          "src": "581:53:2"
         },
         {
           "contract": "Tracepic",
           "path": "contracts/Tracepic.sol",
           "label": "publicAnalysisById",
-          "astId": 719,
+          "astId": 914,
           "type": "t_mapping<t_struct<Tracepic.analyse>>",
-          "src": "640:53:1"
+          "src": "640:53:2"
         },
         {
           "contract": "Tracepic",
           "path": "contracts/Tracepic.sol",
           "label": "publicAnalysisBuyer",
-          "astId": 724,
+          "astId": 919,
           "type": "t_mapping<t_array:dyn<t_struct<Tracepic.analyse>>>",
-          "src": "699:56:1"
+          "src": "699:56:2"
         },
         {
           "contract": "Tracepic",
           "path": "contracts/Tracepic.sol",
           "label": "publicAnalysesPoster",
-          "astId": 729,
+          "astId": 924,
           "type": "t_mapping<t_array:dyn<t_uint256>>",
-          "src": "761:58:1"
+          "src": "761:58:2"
         },
         {
           "contract": "Tracepic",
           "path": "contracts/Tracepic.sol",
           "label": "privateAnalysis",
-          "astId": 733,
+          "astId": 928,
           "type": "t_mapping<t_struct<Tracepic.privateAnalyse>>",
-          "src": "826:57:1"
+          "src": "826:57:2"
         },
         {
           "contract": "Tracepic",
           "path": "contracts/Tracepic.sol",
           "label": "privateAnalysesPoster",
-          "astId": 738,
+          "astId": 933,
           "type": "t_mapping<t_array:dyn<t_uint256>>",
-          "src": "889:59:1"
+          "src": "889:59:2"
         },
         {
           "contract": "Tracepic",
           "path": "contracts/Tracepic.sol",
           "label": "privateAnalysisBuyer",
-          "astId": 743,
+          "astId": 938,
           "type": "t_mapping<t_array:dyn<t_struct<Tracepic.privateAnalyse>>>",
-          "src": "954:64:1"
+          "src": "954:64:2"
         },
         {
           "contract": "Tracepic",
           "path": "contracts/Tracepic.sol",
           "label": "privateAnalysesOwner",
-          "astId": 748,
+          "astId": 943,
           "type": "t_mapping<t_array:dyn<t_struct<Tracepic.privateAnalyse>>>",
-          "src": "1024:65:1"
+          "src": "1024:65:2"
         },
         {
           "contract": "Tracepic",
           "path": "contracts/Tracepic.sol",
           "label": "publicAnalyseCounter",
-          "astId": 750,
+          "astId": 945,
           "type": "t_uint256",
-          "src": "1119:28:1"
+          "src": "1119:28:2"
         },
         {
           "contract": "Tracepic",
           "path": "contracts/Tracepic.sol",
           "label": "privateAnalysesCounter",
-          "astId": 752,
+          "astId": 947,
           "type": "t_uint256",
-          "src": "1153:30:1"
+          "src": "1153:30:2"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    },
+    "TraceableAnalysis": {
+      "address": "0x578F794ED815030A6B95a8913eB860331a678a90",
+      "constructorCode": "608060405234801561001057600080fd5b5061183a806100206000396000f3fe",
+      "bodyBytecodeHash": "157a85f12b17b3367379dfbba5444b9232176691a8dc46bfc4360f3006e4aedb",
+      "localBytecodeHash": "b1321b24e571283c2ce9ef0df6167ff3f63283d51247701e04e92f87c12b4182",
+      "deployedBytecodeHash": "b1321b24e571283c2ce9ef0df6167ff3f63283d51247701e04e92f87c12b4182",
+      "types": {
+        "t_struct<TraceableAnalysis.cycle>": {
+          "id": "t_struct<TraceableAnalysis.cycle>",
+          "kind": "struct",
+          "label": "TraceableAnalysis.cycle",
+          "members": [
+            {
+              "label": "id",
+              "astId": 688,
+              "type": "t_uint256",
+              "src": "275:10:1"
+            },
+            {
+              "label": "seller",
+              "astId": 690,
+              "type": "t_address_payable",
+              "src": "295:22:1"
+            },
+            {
+              "label": "buyer",
+              "astId": 692,
+              "type": "t_address",
+              "src": "327:13:1"
+            },
+            {
+              "label": "price",
+              "astId": 694,
+              "type": "t_uint256",
+              "src": "350:13:1"
+            },
+            {
+              "label": "paid",
+              "astId": 696,
+              "type": "t_bool",
+              "src": "373:9:1"
+            },
+            {
+              "label": "cycleTimes",
+              "astId": 698,
+              "type": "t_uint256",
+              "src": "392:18:1"
+            },
+            {
+              "label": "analysisIdsCounter",
+              "astId": 700,
+              "type": "t_uint256",
+              "src": "420:26:1"
+            },
+            {
+              "label": "analysisIds",
+              "astId": 703,
+              "type": "t_array:dyn<t_uint256>",
+              "src": "456:21:1"
+            }
+          ]
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_address_payable": {
+          "id": "t_address_payable",
+          "kind": "elementary",
+          "label": "address payable"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        },
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_array:dyn<t_uint256>": {
+          "id": "t_array:dyn<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "dyn",
+          "kind": "array",
+          "label": "uint256[]"
+        },
+        "t_mapping<t_struct<TraceableAnalysis.cycle>>": {
+          "id": "t_mapping<t_struct<TraceableAnalysis.cycle>>",
+          "valueType": "t_struct<TraceableAnalysis.cycle>",
+          "label": "mapping(key => TraceableAnalysis.cycle)",
+          "kind": "mapping"
+        },
+        "t_struct<TraceableAnalysis.analyse>": {
+          "id": "t_struct<TraceableAnalysis.analyse>",
+          "kind": "struct",
+          "label": "TraceableAnalysis.analyse",
+          "members": [
+            {
+              "label": "id",
+              "astId": 677,
+              "type": "t_uint256",
+              "src": "125:10:1"
+            },
+            {
+              "label": "analyseReference",
+              "astId": 679,
+              "type": "t_string",
+              "src": "145:23:1"
+            },
+            {
+              "label": "date",
+              "astId": 681,
+              "type": "t_string",
+              "src": "178:11:1"
+            },
+            {
+              "label": "value",
+              "astId": 683,
+              "type": "t_string",
+              "src": "199:12:1"
+            },
+            {
+              "label": "description",
+              "astId": 685,
+              "type": "t_string",
+              "src": "221:18:1"
+            }
+          ]
+        },
+        "t_string": {
+          "id": "t_string",
+          "kind": "elementary",
+          "label": "string"
+        },
+        "t_mapping<t_struct<TraceableAnalysis.analyse>>": {
+          "id": "t_mapping<t_struct<TraceableAnalysis.analyse>>",
+          "valueType": "t_struct<TraceableAnalysis.analyse>",
+          "label": "mapping(key => TraceableAnalysis.analyse)",
+          "kind": "mapping"
+        }
+      },
+      "storage": [
+        {
+          "contract": "TraceableAnalysis",
+          "path": "contracts/Traceable.sol",
+          "label": "cycles",
+          "astId": 708,
+          "type": "t_mapping<t_struct<TraceableAnalysis.cycle>>",
+          "src": "490:32:1"
+        },
+        {
+          "contract": "TraceableAnalysis",
+          "path": "contracts/Traceable.sol",
+          "label": "analysis",
+          "astId": 712,
+          "type": "t_mapping<t_struct<TraceableAnalysis.analyse>>",
+          "src": "528:36:1"
+        },
+        {
+          "contract": "TraceableAnalysis",
+          "path": "contracts/Traceable.sol",
+          "label": "cyclesCounter",
+          "astId": 714,
+          "type": "t_uint256",
+          "src": "571:21:1"
+        },
+        {
+          "contract": "TraceableAnalysis",
+          "path": "contracts/Traceable.sol",
+          "label": "analysisCounter",
+          "astId": 716,
+          "type": "t_uint256",
+          "src": "598:23:1"
         }
       ],
       "warnings": {
@@ -526,12 +474,42 @@
   },
   "solidityLibs": {},
   "proxies": {
-    "Trimakus/Signup": [
+    "oz/TraceableAnalysis": [
       {
-        "address": "0xC53C33268EFC578f8D02AF09b8588b2E4b93b583",
+        "address": "0x76784Ed8e0C48B21fFE58Df716e2723dF99eF1d9",
         "version": "1.0.0",
-        "implementation": "0xeCA24A9947a87163976390D6B036aC148ACe1710",
-        "admin": "0xc56C2c59b81BF5d29D8b00f2008cb34016bB4760",
+        "implementation": "0x45D87CeDfb0E4A6D3a7d6955362141e1Ef2CB238",
+        "admin": "0x751AF0fC4E61614d76818FcE6A71c268b82EDAac",
+        "kind": "Upgradeable"
+      },
+      {
+        "address": "0x45D87CeDfb0E4A6D3a7d6955362141e1Ef2CB238",
+        "version": "1.0.0",
+        "implementation": "0x76784Ed8e0C48B21fFE58Df716e2723dF99eF1d9",
+        "admin": "0x751AF0fC4E61614d76818FcE6A71c268b82EDAac",
+        "kind": "Upgradeable"
+      },
+      {
+        "address": "0xa333d7801A91Cc3ba563a076Ac96b0e99f4Bc084",
+        "version": "1.0.0",
+        "implementation": "0x238d633af4b40d3a08BD6eb7FB23Fa65e40fb4e5",
+        "admin": "0x751AF0fC4E61614d76818FcE6A71c268b82EDAac",
+        "kind": "Upgradeable"
+      },
+      {
+        "address": "0x81527d24428E0Bdf1CA9E19531670922f310EB04",
+        "version": "1.0.0",
+        "implementation": "0x578F794ED815030A6B95a8913eB860331a678a90",
+        "admin": "0x751AF0fC4E61614d76818FcE6A71c268b82EDAac",
+        "kind": "Upgradeable"
+      }
+    ],
+    "oz/Tracepic": [
+      {
+        "address": "0x751AF0fC4E61614d76818FcE6A71c268b82EDAac",
+        "version": "1.0.0",
+        "implementation": "0x172b35Ddd2b60c83eA6Cd09d88F8F71D573898f4",
+        "admin": "0x751AF0fC4E61614d76818FcE6A71c268b82EDAac",
         "kind": "Upgradeable"
       }
     ]
@@ -539,6 +517,6 @@
   "manifestVersion": "2.2",
   "version": "1.0.0",
   "proxyAdmin": {
-    "address": "0xc56C2c59b81BF5d29D8b00f2008cb34016bB4760"
+    "address": "0x751AF0fC4E61614d76818FcE6A71c268b82EDAac"
   }
 }

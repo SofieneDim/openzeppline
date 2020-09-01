@@ -50,9 +50,7 @@ contract Tracepic {
     ) public {
         if (_owner != address(0)) {
             privateAnalysesCounter++;
-
             privateAnalysesPoster[msg.sender].push(privateAnalysesCounter);
-
             privateAnalysis[privateAnalysesCounter] = (
                 privateAnalyse(
                     privateAnalysesCounter,
