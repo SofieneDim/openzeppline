@@ -10,100 +10,56 @@ contract TraceableAnalysis {
         string description;
     }
 
+    struct analyseType {
+        string analyseName;
+        uint256 times;
+        uint256 analysisCounter;
+        uint256[] analysisIds;
+    }
+
     struct cycle {
         uint256 id;
         address payable seller;
-        address buyer;
+        address owner;
         uint256 price;
         bool paid;
-        uint256 cycleTimes;
-        uint256 analysisIdsCounter;
-        uint256[] analysisIds;
+        uint256[] analysisTypesIds;
     }
 
     mapping(address => cycle) cycles;
     mapping(uint256 => analyse) analysis;
 
+    mapping(uint256 => analyseType) analysisTypes;
+
     uint256 cyclesCounter;
     uint256 analysisCounter;
-
-    function getCycle(address owner) public view returns (cycle memory result) {
-        return cycles[owner];
-    }
+    uint256 analysisTypesCounter;
 
     function addNewCycle(
         address client,
-        uint256 cycleTimes,
         uint256 price,
-        string memory _reference,
-        string memory date,
-        string memory value,
-        string memory description
+        analyseType[] memory _analysisTypes
     ) public {
         cyclesCounter++;
-        analysisCounter++;
-        analyse memory firstAnalyse = analyse(
-            analysisCounter,
-            _reference,
-            date,
-            value,
-            description
+        analysisTypesCounter++;
+        uint256[] memory analysisTypesIds = new uint256[](
+            _analysisTypes.length
         );
-        analysis[analysisCounter] = firstAnalyse;
-        uint256[] memory _analysis = new uint256[](cycleTimes);
-        _analysis[0] = analysisCounter;
+        for (uint256 i = 0; i < _analysisTypes.length; i++) {
+            analysisTypes[analysisTypesCounter] = _analysisTypes[i];
+            analysisTypesIds[i] = analysisTypesCounter;
+        }
         cycles[client] = cycle(
             cyclesCounter,
             msg.sender,
             client,
             price,
             false,
-            cycleTimes,
-            1,
-            _analysis
+            analysisTypesIds
         );
-    }
+    } // [["name 1","3",1,[1,"2",3]]]
 
-    function addNewAnalyseToCycle(
-        address client,
-        string memory _reference,
-        string memory date,
-        string memory value,
-        string memory description
-    ) public returns (bool isComplete) {
-        cycle memory _cycle = cycles[client];
-        uint256[] memory _analysisIds = _cycle.analysisIds;
-        analysisCounter++;
-        analysis[analysisCounter] = analyse(
-            analysisCounter,
-            _reference,
-            date,
-            value,
-            description
-        );
-        _analysisIds[_cycle.analysisIdsCounter] = analysisCounter;
-        _cycle.analysisIdsCounter++;
-        cycles[client] = _cycle;
-        return (_cycle.analysisIdsCounter == _cycle.cycleTimes);
-    }
-
-    function buyCycle() public payable {
-        require(cyclesCounter > 0, "There should be at least one analyse");
-        cycle storage cycleToBuy = cycles[msg.sender];
-        require(cycleToBuy.paid == false, "analyse was already sold");
-        require(
-            cycleToBuy.price == msg.value,
-            "Value provided does not match price of analyse"
-        );
-        cycleToBuy.paid = true;
-        cycleToBuy.seller.transfer(msg.value);
-    }
-
-    function getAnalyse(uint256 analyseId)
-        public
-        view
-        returns (analyse memory)
-    {
-        return analysis[analyseId];
+    function getCycle(address owner) public view returns (cycle memory result) {
+        return cycles[owner];
     }
 }

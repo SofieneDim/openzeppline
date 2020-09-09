@@ -286,11 +286,11 @@
       }
     },
     "TraceableAnalysis": {
-      "address": "0x578F794ED815030A6B95a8913eB860331a678a90",
-      "constructorCode": "608060405234801561001057600080fd5b5061183a806100206000396000f3fe",
-      "bodyBytecodeHash": "157a85f12b17b3367379dfbba5444b9232176691a8dc46bfc4360f3006e4aedb",
-      "localBytecodeHash": "b1321b24e571283c2ce9ef0df6167ff3f63283d51247701e04e92f87c12b4182",
-      "deployedBytecodeHash": "b1321b24e571283c2ce9ef0df6167ff3f63283d51247701e04e92f87c12b4182",
+      "address": "0x172b35Ddd2b60c83eA6Cd09d88F8F71D573898f4",
+      "constructorCode": "608060405234801561001057600080fd5b50610bb9806100206000396000f3fe",
+      "bodyBytecodeHash": "5bf5fbf2809c9f61096a68bf7d279d5cc2682d1d1867ab6ebbe371845f33ba26",
+      "localBytecodeHash": "7d242b7ab5c9606109f0c50127fc911557652037b205926141fd32a1b61685fb",
+      "deployedBytecodeHash": "7d242b7ab5c9606109f0c50127fc911557652037b205926141fd32a1b61685fb",
       "types": {
         "t_struct<TraceableAnalysis.cycle>": {
           "id": "t_struct<TraceableAnalysis.cycle>",
@@ -299,51 +299,39 @@
           "members": [
             {
               "label": "id",
-              "astId": 688,
+              "astId": 698,
               "type": "t_uint256",
-              "src": "275:10:1"
+              "src": "422:10:1"
             },
             {
               "label": "seller",
-              "astId": 690,
+              "astId": 700,
               "type": "t_address_payable",
-              "src": "295:22:1"
+              "src": "442:22:1"
             },
             {
-              "label": "buyer",
-              "astId": 692,
+              "label": "owner",
+              "astId": 702,
               "type": "t_address",
-              "src": "327:13:1"
+              "src": "474:13:1"
             },
             {
               "label": "price",
-              "astId": 694,
+              "astId": 704,
               "type": "t_uint256",
-              "src": "350:13:1"
+              "src": "497:13:1"
             },
             {
               "label": "paid",
-              "astId": 696,
+              "astId": 706,
               "type": "t_bool",
-              "src": "373:9:1"
+              "src": "520:9:1"
             },
             {
-              "label": "cycleTimes",
-              "astId": 698,
-              "type": "t_uint256",
-              "src": "392:18:1"
-            },
-            {
-              "label": "analysisIdsCounter",
-              "astId": 700,
-              "type": "t_uint256",
-              "src": "420:26:1"
-            },
-            {
-              "label": "analysisIds",
-              "astId": 703,
+              "label": "analysisTypesIds",
+              "astId": 709,
               "type": "t_array:dyn<t_uint256>",
-              "src": "456:21:1"
+              "src": "539:26:1"
             }
           ]
         },
@@ -427,6 +415,43 @@
           "valueType": "t_struct<TraceableAnalysis.analyse>",
           "label": "mapping(key => TraceableAnalysis.analyse)",
           "kind": "mapping"
+        },
+        "t_struct<TraceableAnalysis.analyseType>": {
+          "id": "t_struct<TraceableAnalysis.analyseType>",
+          "kind": "struct",
+          "label": "TraceableAnalysis.analyseType",
+          "members": [
+            {
+              "label": "analyseName",
+              "astId": 688,
+              "type": "t_string",
+              "src": "281:18:1"
+            },
+            {
+              "label": "times",
+              "astId": 690,
+              "type": "t_uint256",
+              "src": "309:13:1"
+            },
+            {
+              "label": "analysisCounter",
+              "astId": 692,
+              "type": "t_uint256",
+              "src": "332:23:1"
+            },
+            {
+              "label": "analysisIds",
+              "astId": 695,
+              "type": "t_array:dyn<t_uint256>",
+              "src": "365:21:1"
+            }
+          ]
+        },
+        "t_mapping<t_struct<TraceableAnalysis.analyseType>>": {
+          "id": "t_mapping<t_struct<TraceableAnalysis.analyseType>>",
+          "valueType": "t_struct<TraceableAnalysis.analyseType>",
+          "label": "mapping(key => TraceableAnalysis.analyseType)",
+          "kind": "mapping"
         }
       },
       "storage": [
@@ -434,33 +459,49 @@
           "contract": "TraceableAnalysis",
           "path": "contracts/Traceable.sol",
           "label": "cycles",
-          "astId": 708,
+          "astId": 714,
           "type": "t_mapping<t_struct<TraceableAnalysis.cycle>>",
-          "src": "490:32:1"
+          "src": "578:32:1"
         },
         {
           "contract": "TraceableAnalysis",
           "path": "contracts/Traceable.sol",
           "label": "analysis",
-          "astId": 712,
+          "astId": 718,
           "type": "t_mapping<t_struct<TraceableAnalysis.analyse>>",
-          "src": "528:36:1"
+          "src": "616:36:1"
+        },
+        {
+          "contract": "TraceableAnalysis",
+          "path": "contracts/Traceable.sol",
+          "label": "analysisTypes",
+          "astId": 722,
+          "type": "t_mapping<t_struct<TraceableAnalysis.analyseType>>",
+          "src": "659:45:1"
         },
         {
           "contract": "TraceableAnalysis",
           "path": "contracts/Traceable.sol",
           "label": "cyclesCounter",
-          "astId": 714,
+          "astId": 724,
           "type": "t_uint256",
-          "src": "571:21:1"
+          "src": "711:21:1"
         },
         {
           "contract": "TraceableAnalysis",
           "path": "contracts/Traceable.sol",
           "label": "analysisCounter",
-          "astId": 716,
+          "astId": 726,
           "type": "t_uint256",
-          "src": "598:23:1"
+          "src": "738:23:1"
+        },
+        {
+          "contract": "TraceableAnalysis",
+          "path": "contracts/Traceable.sol",
+          "label": "analysisTypesCounter",
+          "astId": 728,
+          "type": "t_uint256",
+          "src": "767:28:1"
         }
       ],
       "warnings": {
@@ -474,37 +515,16 @@
   },
   "solidityLibs": {},
   "proxies": {
-    "oz/TraceableAnalysis": [
+    "oz/Tracepic": [
       {
-        "address": "0x76784Ed8e0C48B21fFE58Df716e2723dF99eF1d9",
+        "address": "0x751AF0fC4E61614d76818FcE6A71c268b82EDAac",
         "version": "1.0.0",
-        "implementation": "0x45D87CeDfb0E4A6D3a7d6955362141e1Ef2CB238",
-        "admin": "0x751AF0fC4E61614d76818FcE6A71c268b82EDAac",
-        "kind": "Upgradeable"
-      },
-      {
-        "address": "0x45D87CeDfb0E4A6D3a7d6955362141e1Ef2CB238",
-        "version": "1.0.0",
-        "implementation": "0x76784Ed8e0C48B21fFE58Df716e2723dF99eF1d9",
-        "admin": "0x751AF0fC4E61614d76818FcE6A71c268b82EDAac",
-        "kind": "Upgradeable"
-      },
-      {
-        "address": "0xa333d7801A91Cc3ba563a076Ac96b0e99f4Bc084",
-        "version": "1.0.0",
-        "implementation": "0x238d633af4b40d3a08BD6eb7FB23Fa65e40fb4e5",
-        "admin": "0x751AF0fC4E61614d76818FcE6A71c268b82EDAac",
-        "kind": "Upgradeable"
-      },
-      {
-        "address": "0x81527d24428E0Bdf1CA9E19531670922f310EB04",
-        "version": "1.0.0",
-        "implementation": "0x578F794ED815030A6B95a8913eB860331a678a90",
+        "implementation": "0x172b35Ddd2b60c83eA6Cd09d88F8F71D573898f4",
         "admin": "0x751AF0fC4E61614d76818FcE6A71c268b82EDAac",
         "kind": "Upgradeable"
       }
     ],
-    "oz/Tracepic": [
+    "oz/TraceableAnalysis": [
       {
         "address": "0x751AF0fC4E61614d76818FcE6A71c268b82EDAac",
         "version": "1.0.0",
