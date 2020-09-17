@@ -8,7 +8,6 @@ contract Authentication {
         string userName;
         string email;
         string phoneNumber;
-        string phAddress;
         string password;
         string logoLink;
         bool labo;
@@ -19,7 +18,6 @@ contract Authentication {
         uint256 id;
         string date;
         string name;
-        string phAddress;
         string email;
         string phoneNumber;
         string password;
@@ -46,7 +44,7 @@ contract Authentication {
         string memory _userName,
         string memory _email,
         string memory phoneNumber,
-        string memory _password
+        string memory _phAddress
     ) public {
         // store account
         accountsCounter++;
@@ -56,8 +54,7 @@ contract Authentication {
             _userName,
             _email,
             phoneNumber,
-            "",
-            _password,
+            _phAddress,
             "",
             false
         );
@@ -67,7 +64,7 @@ contract Authentication {
         address _address,
         string memory requestDate,
         string memory laboName,
-        string memory phAddress,
+        string memory phoneNumber,
         string memory _email,
         string memory _password,
         string memory logoLink
@@ -78,9 +75,8 @@ contract Authentication {
             signupRequestCounter,
             requestDate,
             laboName,
-            phAddress,
+            phoneNumber,
             _email,
-            "",
             _password,
             logoLink,
             true,
@@ -91,9 +87,8 @@ contract Authentication {
             signupRequestCounter,
             requestDate,
             laboName,
-            phAddress,
+            phoneNumber,
             _email,
-            "",
             _password,
             logoLink,
             true,
@@ -109,9 +104,8 @@ contract Authentication {
             request.id,
             request.date,
             request.name,
-            request.phAddress,
-            request.email,
             request.phoneNumber,
+            request.email,
             request.password,
             request.logoLink,
             false,
@@ -122,9 +116,8 @@ contract Authentication {
             request.id,
             request.date,
             request.name,
-            request.phAddress,
-            request.email,
             request.phoneNumber,
+            request.email,
             request.password,
             request.logoLink,
             false,
@@ -137,7 +130,6 @@ contract Authentication {
             request.name,
             request.email,
             request.phoneNumber,
-            request.phAddress,
             request.password,
             request.logoLink,
             true
@@ -152,9 +144,8 @@ contract Authentication {
             request.id,
             request.date,
             request.name,
-            request.phAddress,
-            request.email,
             request.phoneNumber,
+            request.email,
             request.password,
             request.logoLink,
             false,
@@ -165,9 +156,8 @@ contract Authentication {
             request.id,
             request.date,
             request.name,
-            request.phAddress,
-            request.email,
             request.phoneNumber,
+            request.email,
             request.password,
             request.logoLink,
             false,
@@ -238,7 +228,6 @@ contract Authentication {
         string memory _email,
         string memory phoneNumber,
         string memory _password,
-        string memory _phAddress,
         string memory logoLink
     ) public {
         account memory userAccount = accounts[_id];
@@ -249,7 +238,6 @@ contract Authentication {
             _userName,
             _email,
             phoneNumber,
-            _phAddress,
             _password,
             logoLink,
             userAccount.labo

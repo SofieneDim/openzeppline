@@ -16,5 +16,13 @@ module.exports = {
       gasPrice: 0,
       networkId: '*',
     },
+    vps: {
+      protocol: 'http',
+      host: '51.75.246.191',
+      port: 8545,
+      gas: 999999999,
+      gasPrice: 0,
+      networkId: '*',
+    },
   },
 };

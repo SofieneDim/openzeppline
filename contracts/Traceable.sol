@@ -36,6 +36,7 @@ contract TraceableAnalysis {
     uint256 analysisTypesCounter;
 
     function addNewCycle(
+        // [["name 1", 1, 0, [0]]]
         address client,
         uint256 price,
         analyseType[] memory _analysisTypes
@@ -57,9 +58,17 @@ contract TraceableAnalysis {
             false,
             analysisTypesIds
         );
-    } // [["name 1","3",1,[1,"2",3]]]
+    }
 
     function getCycle(address owner) public view returns (cycle memory result) {
         return cycles[owner];
+    }
+
+    function getAnalyseType(uint256 id)
+        public
+        view
+        returns (analyseType memory result)
+    {
+        return analysisTypes[id];
     }
 }

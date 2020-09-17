@@ -286,7 +286,7 @@
       }
     },
     "TraceableAnalysis": {
-      "address": "0x172b35Ddd2b60c83eA6Cd09d88F8F71D573898f4",
+      "address": "0x45D87CeDfb0E4A6D3a7d6955362141e1Ef2CB238",
       "constructorCode": "608060405234801561001057600080fd5b50610bb9806100206000396000f3fe",
       "bodyBytecodeHash": "5bf5fbf2809c9f61096a68bf7d279d5cc2682d1d1867ab6ebbe371845f33ba26",
       "localBytecodeHash": "7d242b7ab5c9606109f0c50127fc911557652037b205926141fd32a1b61685fb",
@@ -526,9 +526,9 @@
     ],
     "oz/TraceableAnalysis": [
       {
-        "address": "0x751AF0fC4E61614d76818FcE6A71c268b82EDAac",
+        "address": "0x1Ef688ff33CfA67A77d077a0c27Ceec62a185406",
         "version": "1.0.0",
-        "implementation": "0x172b35Ddd2b60c83eA6Cd09d88F8F71D573898f4",
+        "implementation": "0x45D87CeDfb0E4A6D3a7d6955362141e1Ef2CB238",
         "admin": "0x751AF0fC4E61614d76818FcE6A71c268b82EDAac",
         "kind": "Upgradeable"
       }
