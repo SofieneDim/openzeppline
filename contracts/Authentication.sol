@@ -20,7 +20,8 @@ contract Authentication {
         string name;
         string email;
         string phoneNumber;
-        string password;
+        string responsableName;
+        string country;
         string logoLink;
         bool pending;
         bool approved;
@@ -66,7 +67,8 @@ contract Authentication {
         string memory laboName,
         string memory phoneNumber,
         string memory _email,
-        string memory _password,
+        string memory responsableName,
+        string memory country,
         string memory logoLink
     ) public {
         signupRequestCounter++;
@@ -77,7 +79,8 @@ contract Authentication {
             laboName,
             phoneNumber,
             _email,
-            _password,
+            responsableName,
+            country,
             logoLink,
             true,
             false
@@ -89,7 +92,8 @@ contract Authentication {
             laboName,
             phoneNumber,
             _email,
-            _password,
+            responsableName,
+            country,
             logoLink,
             true,
             false
@@ -106,7 +110,8 @@ contract Authentication {
             request.name,
             request.phoneNumber,
             request.email,
-            request.password,
+            request.responsableName,
+            request.country,
             request.logoLink,
             false,
             true
@@ -118,7 +123,8 @@ contract Authentication {
             request.name,
             request.phoneNumber,
             request.email,
-            request.password,
+            request.responsableName,
+            request.country,
             request.logoLink,
             false,
             true
@@ -130,7 +136,7 @@ contract Authentication {
             request.name,
             request.email,
             request.phoneNumber,
-            request.password,
+            request.responsableName,
             request.logoLink,
             true
         );
@@ -146,7 +152,8 @@ contract Authentication {
             request.name,
             request.phoneNumber,
             request.email,
-            request.password,
+            request.responsableName,
+            request.country,
             request.logoLink,
             false,
             false
@@ -158,7 +165,8 @@ contract Authentication {
             request.name,
             request.phoneNumber,
             request.email,
-            request.password,
+            request.responsableName,
+            request.country,
             request.logoLink,
             false,
             false
