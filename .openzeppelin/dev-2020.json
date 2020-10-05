@@ -511,6 +511,244 @@
         "hasInitialValuesInDeclarations": false,
         "uninitializedBaseContracts": []
       }
+    },
+    "Authentication": {
+      "address": "0x5Cee4f488FD1c5d37A4d1a4cBa8306F669D2159b",
+      "constructorCode": "608060405234801561001057600080fd5b5061538b806100206000396000f3fe",
+      "bodyBytecodeHash": "e3b4506c36ae8bec4742202810474bcd7f7a3984536868741df1b7cb41e347cf",
+      "localBytecodeHash": "1d64b584b1d58247d9346623cb39e8949ecc08cc32540543a6a596cc16ec2633",
+      "deployedBytecodeHash": "1d64b584b1d58247d9346623cb39e8949ecc08cc32540543a6a596cc16ec2633",
+      "types": {
+        "t_struct<Authentication.account>": {
+          "id": "t_struct<Authentication.account>",
+          "kind": "struct",
+          "label": "Authentication.account",
+          "members": [
+            {
+              "label": "id",
+              "astId": 4,
+              "type": "t_uint256",
+              "src": "122:10:0"
+            },
+            {
+              "label": "owner",
+              "astId": 6,
+              "type": "t_address",
+              "src": "142:13:0"
+            },
+            {
+              "label": "userName",
+              "astId": 8,
+              "type": "t_string",
+              "src": "165:15:0"
+            },
+            {
+              "label": "email",
+              "astId": 10,
+              "type": "t_string",
+              "src": "190:12:0"
+            },
+            {
+              "label": "phoneNumber",
+              "astId": 12,
+              "type": "t_string",
+              "src": "212:18:0"
+            },
+            {
+              "label": "password",
+              "astId": 14,
+              "type": "t_string",
+              "src": "240:15:0"
+            },
+            {
+              "label": "logoLink",
+              "astId": 16,
+              "type": "t_string",
+              "src": "265:15:0"
+            },
+            {
+              "label": "country",
+              "astId": 18,
+              "type": "t_string",
+              "src": "290:14:0"
+            },
+            {
+              "label": "labo",
+              "astId": 20,
+              "type": "t_bool",
+              "src": "314:9:0"
+            }
+          ]
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        },
+        "t_string": {
+          "id": "t_string",
+          "kind": "elementary",
+          "label": "string"
+        },
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_mapping<t_struct<Authentication.account>>": {
+          "id": "t_mapping<t_struct<Authentication.account>>",
+          "valueType": "t_struct<Authentication.account>",
+          "label": "mapping(key => Authentication.account)",
+          "kind": "mapping"
+        },
+        "t_mapping<t_bool>": {
+          "id": "t_mapping<t_bool>",
+          "valueType": "t_bool",
+          "label": "mapping(key => bool)",
+          "kind": "mapping"
+        },
+        "t_struct<Authentication.signupRequest>": {
+          "id": "t_struct<Authentication.signupRequest>",
+          "kind": "struct",
+          "label": "Authentication.signupRequest",
+          "members": [
+            {
+              "label": "owner",
+              "astId": 23,
+              "type": "t_address",
+              "src": "367:13:0"
+            },
+            {
+              "label": "id",
+              "astId": 25,
+              "type": "t_uint256",
+              "src": "390:10:0"
+            },
+            {
+              "label": "date",
+              "astId": 27,
+              "type": "t_string",
+              "src": "410:11:0"
+            },
+            {
+              "label": "name",
+              "astId": 29,
+              "type": "t_string",
+              "src": "431:11:0"
+            },
+            {
+              "label": "email",
+              "astId": 31,
+              "type": "t_string",
+              "src": "452:12:0"
+            },
+            {
+              "label": "phoneNumber",
+              "astId": 33,
+              "type": "t_string",
+              "src": "474:18:0"
+            },
+            {
+              "label": "responsableName",
+              "astId": 35,
+              "type": "t_string",
+              "src": "502:22:0"
+            },
+            {
+              "label": "country",
+              "astId": 37,
+              "type": "t_string",
+              "src": "534:14:0"
+            },
+            {
+              "label": "logoLink",
+              "astId": 39,
+              "type": "t_string",
+              "src": "558:15:0"
+            },
+            {
+              "label": "pending",
+              "astId": 41,
+              "type": "t_bool",
+              "src": "583:12:0"
+            },
+            {
+              "label": "approved",
+              "astId": 43,
+              "type": "t_bool",
+              "src": "605:13:0"
+            }
+          ]
+        },
+        "t_mapping<t_struct<Authentication.signupRequest>>": {
+          "id": "t_mapping<t_struct<Authentication.signupRequest>>",
+          "valueType": "t_struct<Authentication.signupRequest>",
+          "label": "mapping(key => Authentication.signupRequest)",
+          "kind": "mapping"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Authentication",
+          "path": "contracts/Authentication.sol",
+          "label": "accounts",
+          "astId": 48,
+          "type": "t_mapping<t_struct<Authentication.account>>",
+          "src": "631:43:0"
+        },
+        {
+          "contract": "Authentication",
+          "path": "contracts/Authentication.sol",
+          "label": "adminAccounts",
+          "astId": 52,
+          "type": "t_mapping<t_bool>",
+          "src": "680:45:0"
+        },
+        {
+          "contract": "Authentication",
+          "path": "contracts/Authentication.sol",
+          "label": "signupRequestsId",
+          "astId": 56,
+          "type": "t_mapping<t_struct<Authentication.signupRequest>>",
+          "src": "731:58:0"
+        },
+        {
+          "contract": "Authentication",
+          "path": "contracts/Authentication.sol",
+          "label": "signupRequestsAddress",
+          "astId": 60,
+          "type": "t_mapping<t_struct<Authentication.signupRequest>>",
+          "src": "795:63:0"
+        },
+        {
+          "contract": "Authentication",
+          "path": "contracts/Authentication.sol",
+          "label": "accountsCounter",
+          "astId": 62,
+          "type": "t_uint256",
+          "src": "888:23:0"
+        },
+        {
+          "contract": "Authentication",
+          "path": "contracts/Authentication.sol",
+          "label": "signupRequestCounter",
+          "astId": 64,
+          "type": "t_uint256",
+          "src": "917:28:0"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
     }
   },
   "solidityLibs": {},
@@ -529,6 +767,15 @@
         "address": "0x1Ef688ff33CfA67A77d077a0c27Ceec62a185406",
         "version": "1.0.0",
         "implementation": "0x45D87CeDfb0E4A6D3a7d6955362141e1Ef2CB238",
+        "admin": "0x751AF0fC4E61614d76818FcE6A71c268b82EDAac",
+        "kind": "Upgradeable"
+      }
+    ],
+    "oz/Authentication": [
+      {
+        "address": "0x35F4ded6e168B93243c3ef69AB06855eAe808523",
+        "version": "1.0.0",
+        "implementation": "0x5Cee4f488FD1c5d37A4d1a4cBa8306F669D2159b",
         "admin": "0x751AF0fC4E61614d76818FcE6A71c268b82EDAac",
         "kind": "Upgradeable"
       }

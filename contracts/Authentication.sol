@@ -10,6 +10,7 @@ contract Authentication {
         string phoneNumber;
         string password;
         string logoLink;
+        string country;
         bool labo;
     }
 
@@ -56,6 +57,7 @@ contract Authentication {
             _email,
             phoneNumber,
             _phAddress,
+            "",
             "",
             false
         );
@@ -138,6 +140,7 @@ contract Authentication {
             request.phoneNumber,
             request.responsableName,
             request.logoLink,
+            request.country,
             true
         );
     }
@@ -248,6 +251,7 @@ contract Authentication {
             phoneNumber,
             _password,
             logoLink,
+            userAccount.country,
             userAccount.labo
         );
     }
