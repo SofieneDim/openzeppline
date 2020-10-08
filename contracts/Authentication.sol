@@ -12,6 +12,7 @@ contract Authentication {
         string logoLink;
         string country;
         bool labo;
+        bool blocked;
     }
 
     struct signupRequest {
@@ -59,6 +60,7 @@ contract Authentication {
             _phAddress,
             "",
             "",
+            false,
             false
         );
     }
@@ -141,7 +143,8 @@ contract Authentication {
             request.responsableName,
             request.logoLink,
             request.country,
-            true
+            true,
+            false
         );
     }
 
@@ -252,7 +255,8 @@ contract Authentication {
             _password,
             logoLink,
             userAccount.country,
-            userAccount.labo
+            userAccount.labo,
+            false
         );
     }
 
