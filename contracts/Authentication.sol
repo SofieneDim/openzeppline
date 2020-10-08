@@ -179,6 +179,16 @@ contract Authentication {
         );
     }
 
+    function blockUser(uint256 clientId) public {
+        require(adminAccounts[msg.sender], "You are not admin");
+        accounts[clientId].blocked = true;
+    }
+
+    function unblockUser(uint256 clientId) public {
+        require(adminAccounts[msg.sender], "You are not admin");
+        accounts[clientId].blocked = false;
+    }
+
     function checkRequest(address _address)
         public
         view

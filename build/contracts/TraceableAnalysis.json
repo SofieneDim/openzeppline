@@ -154,14 +154,14 @@
     "absolutePath": "contracts/Traceable.sol",
     "exportedSymbols": {
       "TraceableAnalysis": [
-        823
+        870
       ]
     },
-    "id": 824,
+    "id": 871,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 675,
+        "id": 722,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -170,7 +170,7 @@
         "src": "0:33:1"
       },
       {
-        "id": 676,
+        "id": 723,
         "literals": [
           "solidity",
           ">",
@@ -189,23 +189,23 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 823,
+        "id": 870,
         "linearizedBaseContracts": [
-          823
+          870
         ],
         "name": "TraceableAnalysis",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "TraceableAnalysis.analyse",
-            "id": 687,
+            "id": 734,
             "members": [
               {
                 "constant": false,
-                "id": 678,
+                "id": 725,
                 "name": "id",
                 "nodeType": "VariableDeclaration",
-                "scope": 687,
+                "scope": 734,
                 "src": "125:10:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -214,7 +214,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 677,
+                  "id": 724,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "125:7:1",
@@ -228,10 +228,10 @@
               },
               {
                 "constant": false,
-                "id": 680,
+                "id": 727,
                 "name": "analyseReference",
                 "nodeType": "VariableDeclaration",
-                "scope": 687,
+                "scope": 734,
                 "src": "145:23:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -240,7 +240,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 679,
+                  "id": 726,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "145:6:1",
@@ -254,10 +254,10 @@
               },
               {
                 "constant": false,
-                "id": 682,
+                "id": 729,
                 "name": "date",
                 "nodeType": "VariableDeclaration",
-                "scope": 687,
+                "scope": 734,
                 "src": "178:11:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -266,7 +266,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 681,
+                  "id": 728,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "178:6:1",
@@ -280,10 +280,10 @@
               },
               {
                 "constant": false,
-                "id": 684,
+                "id": 731,
                 "name": "value",
                 "nodeType": "VariableDeclaration",
-                "scope": 687,
+                "scope": 734,
                 "src": "199:12:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -292,7 +292,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 683,
+                  "id": 730,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "199:6:1",
@@ -306,10 +306,10 @@
               },
               {
                 "constant": false,
-                "id": 686,
+                "id": 733,
                 "name": "description",
                 "nodeType": "VariableDeclaration",
-                "scope": 687,
+                "scope": 734,
                 "src": "221:18:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -318,7 +318,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 685,
+                  "id": 732,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "221:6:1",
@@ -333,20 +333,20 @@
             ],
             "name": "analyse",
             "nodeType": "StructDefinition",
-            "scope": 823,
+            "scope": 870,
             "src": "100:146:1",
             "visibility": "public"
           },
           {
             "canonicalName": "TraceableAnalysis.analyseType",
-            "id": 697,
+            "id": 744,
             "members": [
               {
                 "constant": false,
-                "id": 689,
+                "id": 736,
                 "name": "analyseName",
                 "nodeType": "VariableDeclaration",
-                "scope": 697,
+                "scope": 744,
                 "src": "281:18:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -355,7 +355,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 688,
+                  "id": 735,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "281:6:1",
@@ -369,10 +369,10 @@
               },
               {
                 "constant": false,
-                "id": 691,
+                "id": 738,
                 "name": "times",
                 "nodeType": "VariableDeclaration",
-                "scope": 697,
+                "scope": 744,
                 "src": "309:13:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -381,7 +381,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 690,
+                  "id": 737,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "309:7:1",
@@ -395,10 +395,10 @@
               },
               {
                 "constant": false,
-                "id": 693,
+                "id": 740,
                 "name": "analysisCounter",
                 "nodeType": "VariableDeclaration",
-                "scope": 697,
+                "scope": 744,
                 "src": "332:23:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -407,7 +407,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 692,
+                  "id": 739,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "332:7:1",
@@ -421,10 +421,10 @@
               },
               {
                 "constant": false,
-                "id": 696,
+                "id": 743,
                 "name": "analysisIds",
                 "nodeType": "VariableDeclaration",
-                "scope": 697,
+                "scope": 744,
                 "src": "365:21:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -434,7 +434,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 694,
+                    "id": 741,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "365:7:1",
@@ -443,7 +443,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 695,
+                  "id": 742,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "365:9:1",
@@ -458,20 +458,20 @@
             ],
             "name": "analyseType",
             "nodeType": "StructDefinition",
-            "scope": 823,
+            "scope": 870,
             "src": "252:141:1",
             "visibility": "public"
           },
           {
             "canonicalName": "TraceableAnalysis.cycle",
-            "id": 711,
+            "id": 758,
             "members": [
               {
                 "constant": false,
-                "id": 699,
+                "id": 746,
                 "name": "id",
                 "nodeType": "VariableDeclaration",
-                "scope": 711,
+                "scope": 758,
                 "src": "422:10:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -480,7 +480,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 698,
+                  "id": 745,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "422:7:1",
@@ -494,10 +494,10 @@
               },
               {
                 "constant": false,
-                "id": 701,
+                "id": 748,
                 "name": "seller",
                 "nodeType": "VariableDeclaration",
-                "scope": 711,
+                "scope": 758,
                 "src": "442:22:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -506,7 +506,7 @@
                   "typeString": "address payable"
                 },
                 "typeName": {
-                  "id": 700,
+                  "id": 747,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "442:15:1",
@@ -521,10 +521,10 @@
               },
               {
                 "constant": false,
-                "id": 703,
+                "id": 750,
                 "name": "owner",
                 "nodeType": "VariableDeclaration",
-                "scope": 711,
+                "scope": 758,
                 "src": "474:13:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -533,7 +533,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 702,
+                  "id": 749,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "474:7:1",
@@ -548,10 +548,10 @@
               },
               {
                 "constant": false,
-                "id": 705,
+                "id": 752,
                 "name": "price",
                 "nodeType": "VariableDeclaration",
-                "scope": 711,
+                "scope": 758,
                 "src": "497:13:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -560,7 +560,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 704,
+                  "id": 751,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "497:7:1",
@@ -574,10 +574,10 @@
               },
               {
                 "constant": false,
-                "id": 707,
+                "id": 754,
                 "name": "paid",
                 "nodeType": "VariableDeclaration",
-                "scope": 711,
+                "scope": 758,
                 "src": "520:9:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -586,7 +586,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 706,
+                  "id": 753,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "520:4:1",
@@ -600,10 +600,10 @@
               },
               {
                 "constant": false,
-                "id": 710,
+                "id": 757,
                 "name": "analysisTypesIds",
                 "nodeType": "VariableDeclaration",
-                "scope": 711,
+                "scope": 758,
                 "src": "539:26:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -613,7 +613,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 708,
+                    "id": 755,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "539:7:1",
@@ -622,7 +622,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 709,
+                  "id": 756,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "539:9:1",
@@ -637,27 +637,27 @@
             ],
             "name": "cycle",
             "nodeType": "StructDefinition",
-            "scope": 823,
+            "scope": 870,
             "src": "399:173:1",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 715,
+            "id": 762,
             "name": "cycles",
             "nodeType": "VariableDeclaration",
-            "scope": 823,
+            "scope": 870,
             "src": "578:32:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_cycle_$711_storage_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_cycle_$758_storage_$",
               "typeString": "mapping(address => struct TraceableAnalysis.cycle)"
             },
             "typeName": {
-              "id": 714,
+              "id": 761,
               "keyType": {
-                "id": 712,
+                "id": 759,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "586:7:1",
@@ -669,18 +669,18 @@
               "nodeType": "Mapping",
               "src": "578:25:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_cycle_$711_storage_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_cycle_$758_storage_$",
                 "typeString": "mapping(address => struct TraceableAnalysis.cycle)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 713,
+                "id": 760,
                 "name": "cycle",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 711,
+                "referencedDeclaration": 758,
                 "src": "597:5:1",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_cycle_$711_storage_ptr",
+                  "typeIdentifier": "t_struct$_cycle_$758_storage_ptr",
                   "typeString": "struct TraceableAnalysis.cycle"
                 }
               }
@@ -690,21 +690,21 @@
           },
           {
             "constant": false,
-            "id": 719,
+            "id": 766,
             "name": "analysis",
             "nodeType": "VariableDeclaration",
-            "scope": 823,
+            "scope": 870,
             "src": "616:36:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_analyse_$687_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_analyse_$734_storage_$",
               "typeString": "mapping(uint256 => struct TraceableAnalysis.analyse)"
             },
             "typeName": {
-              "id": 718,
+              "id": 765,
               "keyType": {
-                "id": 716,
+                "id": 763,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
                 "src": "624:7:1",
@@ -716,18 +716,18 @@
               "nodeType": "Mapping",
               "src": "616:27:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_analyse_$687_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_analyse_$734_storage_$",
                 "typeString": "mapping(uint256 => struct TraceableAnalysis.analyse)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 717,
+                "id": 764,
                 "name": "analyse",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 687,
+                "referencedDeclaration": 734,
                 "src": "635:7:1",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_analyse_$687_storage_ptr",
+                  "typeIdentifier": "t_struct$_analyse_$734_storage_ptr",
                   "typeString": "struct TraceableAnalysis.analyse"
                 }
               }
@@ -737,21 +737,21 @@
           },
           {
             "constant": false,
-            "id": 723,
+            "id": 770,
             "name": "analysisTypes",
             "nodeType": "VariableDeclaration",
-            "scope": 823,
+            "scope": 870,
             "src": "659:45:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_analyseType_$697_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_analyseType_$744_storage_$",
               "typeString": "mapping(uint256 => struct TraceableAnalysis.analyseType)"
             },
             "typeName": {
-              "id": 722,
+              "id": 769,
               "keyType": {
-                "id": 720,
+                "id": 767,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
                 "src": "667:7:1",
@@ -763,18 +763,18 @@
               "nodeType": "Mapping",
               "src": "659:31:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_analyseType_$697_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_analyseType_$744_storage_$",
                 "typeString": "mapping(uint256 => struct TraceableAnalysis.analyseType)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 721,
+                "id": 768,
                 "name": "analyseType",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 697,
+                "referencedDeclaration": 744,
                 "src": "678:11:1",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_analyseType_$697_storage_ptr",
+                  "typeIdentifier": "t_struct$_analyseType_$744_storage_ptr",
                   "typeString": "struct TraceableAnalysis.analyseType"
                 }
               }
@@ -784,10 +784,10 @@
           },
           {
             "constant": false,
-            "id": 725,
+            "id": 772,
             "name": "cyclesCounter",
             "nodeType": "VariableDeclaration",
-            "scope": 823,
+            "scope": 870,
             "src": "711:21:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -796,7 +796,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 724,
+              "id": 771,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "711:7:1",
@@ -810,10 +810,10 @@
           },
           {
             "constant": false,
-            "id": 727,
+            "id": 774,
             "name": "analysisCounter",
             "nodeType": "VariableDeclaration",
-            "scope": 823,
+            "scope": 870,
             "src": "738:23:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -822,7 +822,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 726,
+              "id": 773,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "738:7:1",
@@ -836,10 +836,10 @@
           },
           {
             "constant": false,
-            "id": 729,
+            "id": 776,
             "name": "analysisTypesCounter",
             "nodeType": "VariableDeclaration",
-            "scope": 823,
+            "scope": 870,
             "src": "767:28:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -848,7 +848,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 728,
+              "id": 775,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "767:7:1",
@@ -862,14 +862,14 @@
           },
           {
             "body": {
-              "id": 797,
+              "id": 844,
               "nodeType": "Block",
               "src": "963:546:1",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 740,
+                    "id": 787,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -880,11 +880,11 @@
                     "src": "973:15:1",
                     "subExpression": {
                       "argumentTypes": null,
-                      "id": 739,
+                      "id": 786,
                       "name": "cyclesCounter",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 725,
+                      "referencedDeclaration": 772,
                       "src": "973:13:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -896,14 +896,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 741,
+                  "id": 788,
                   "nodeType": "ExpressionStatement",
                   "src": "973:15:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 743,
+                    "id": 790,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -914,11 +914,11 @@
                     "src": "998:22:1",
                     "subExpression": {
                       "argumentTypes": null,
-                      "id": 742,
+                      "id": 789,
                       "name": "analysisTypesCounter",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 729,
+                      "referencedDeclaration": 776,
                       "src": "998:20:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -930,21 +930,21 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 744,
+                  "id": 791,
                   "nodeType": "ExpressionStatement",
                   "src": "998:22:1"
                 },
                 {
                   "assignments": [
-                    748
+                    795
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 748,
+                      "id": 795,
                       "name": "analysisTypesIds",
                       "nodeType": "VariableDeclaration",
-                      "scope": 797,
+                      "scope": 844,
                       "src": "1030:33:1",
                       "stateVariable": false,
                       "storageLocation": "memory",
@@ -954,7 +954,7 @@
                       },
                       "typeName": {
                         "baseType": {
-                          "id": 746,
+                          "id": 793,
                           "name": "uint256",
                           "nodeType": "ElementaryTypeName",
                           "src": "1030:7:1",
@@ -963,7 +963,7 @@
                             "typeString": "uint256"
                           }
                         },
-                        "id": 747,
+                        "id": 794,
                         "length": null,
                         "nodeType": "ArrayTypeName",
                         "src": "1030:9:1",
@@ -976,7 +976,7 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 755,
+                  "id": 802,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
@@ -984,18 +984,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 752,
+                          "id": 799,
                           "name": "_analysisTypes",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 736,
+                          "referencedDeclaration": 783,
                           "src": "1093:14:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_array$_t_struct$_analyseType_$697_memory_$dyn_memory_ptr",
+                            "typeIdentifier": "t_array$_t_struct$_analyseType_$744_memory_$dyn_memory_ptr",
                             "typeString": "struct TraceableAnalysis.analyseType memory[] memory"
                           }
                         },
-                        "id": 753,
+                        "id": 800,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1017,7 +1017,7 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 751,
+                      "id": 798,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1030,7 +1030,7 @@
                       },
                       "typeName": {
                         "baseType": {
-                          "id": 749,
+                          "id": 796,
                           "name": "uint256",
                           "nodeType": "ElementaryTypeName",
                           "src": "1070:7:1",
@@ -1039,7 +1039,7 @@
                             "typeString": "uint256"
                           }
                         },
-                        "id": 750,
+                        "id": 797,
                         "length": null,
                         "nodeType": "ArrayTypeName",
                         "src": "1070:9:1",
@@ -1049,7 +1049,7 @@
                         }
                       }
                     },
-                    "id": 754,
+                    "id": 801,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1068,14 +1068,14 @@
                 },
                 {
                   "body": {
-                    "id": 781,
+                    "id": 828,
                     "nodeType": "Block",
                     "src": "1186:136:1",
                     "statements": [
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 773,
+                          "id": 820,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1084,25 +1084,25 @@
                             "argumentTypes": null,
                             "baseExpression": {
                               "argumentTypes": null,
-                              "id": 767,
+                              "id": 814,
                               "name": "analysisTypes",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 723,
+                              "referencedDeclaration": 770,
                               "src": "1200:13:1",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_analyseType_$697_storage_$",
+                                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_analyseType_$744_storage_$",
                                 "typeString": "mapping(uint256 => struct TraceableAnalysis.analyseType storage ref)"
                               }
                             },
-                            "id": 769,
+                            "id": 816,
                             "indexExpression": {
                               "argumentTypes": null,
-                              "id": 768,
+                              "id": 815,
                               "name": "analysisTypesCounter",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 729,
+                              "referencedDeclaration": 776,
                               "src": "1214:20:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -1116,7 +1116,7 @@
                             "nodeType": "IndexAccess",
                             "src": "1200:35:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_analyseType_$697_storage",
+                              "typeIdentifier": "t_struct$_analyseType_$744_storage",
                               "typeString": "struct TraceableAnalysis.analyseType storage ref"
                             }
                           },
@@ -1126,25 +1126,25 @@
                             "argumentTypes": null,
                             "baseExpression": {
                               "argumentTypes": null,
-                              "id": 770,
+                              "id": 817,
                               "name": "_analysisTypes",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 736,
+                              "referencedDeclaration": 783,
                               "src": "1238:14:1",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_array$_t_struct$_analyseType_$697_memory_$dyn_memory_ptr",
+                                "typeIdentifier": "t_array$_t_struct$_analyseType_$744_memory_$dyn_memory_ptr",
                                 "typeString": "struct TraceableAnalysis.analyseType memory[] memory"
                               }
                             },
-                            "id": 772,
+                            "id": 819,
                             "indexExpression": {
                               "argumentTypes": null,
-                              "id": 771,
+                              "id": 818,
                               "name": "i",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 757,
+                              "referencedDeclaration": 804,
                               "src": "1253:1:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -1158,24 +1158,24 @@
                             "nodeType": "IndexAccess",
                             "src": "1238:17:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_analyseType_$697_memory",
+                              "typeIdentifier": "t_struct$_analyseType_$744_memory",
                               "typeString": "struct TraceableAnalysis.analyseType memory"
                             }
                           },
                           "src": "1200:55:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_analyseType_$697_storage",
+                            "typeIdentifier": "t_struct$_analyseType_$744_storage",
                             "typeString": "struct TraceableAnalysis.analyseType storage ref"
                           }
                         },
-                        "id": 774,
+                        "id": 821,
                         "nodeType": "ExpressionStatement",
                         "src": "1200:55:1"
                       },
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 779,
+                          "id": 826,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1184,25 +1184,25 @@
                             "argumentTypes": null,
                             "baseExpression": {
                               "argumentTypes": null,
-                              "id": 775,
+                              "id": 822,
                               "name": "analysisTypesIds",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 748,
+                              "referencedDeclaration": 795,
                               "src": "1269:16:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
                                 "typeString": "uint256[] memory"
                               }
                             },
-                            "id": 777,
+                            "id": 824,
                             "indexExpression": {
                               "argumentTypes": null,
-                              "id": 776,
+                              "id": 823,
                               "name": "i",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 757,
+                              "referencedDeclaration": 804,
                               "src": "1286:1:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -1224,11 +1224,11 @@
                           "operator": "=",
                           "rightHandSide": {
                             "argumentTypes": null,
-                            "id": 778,
+                            "id": 825,
                             "name": "analysisTypesCounter",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 729,
+                            "referencedDeclaration": 776,
                             "src": "1291:20:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -1241,7 +1241,7 @@
                             "typeString": "uint256"
                           }
                         },
-                        "id": 780,
+                        "id": 827,
                         "nodeType": "ExpressionStatement",
                         "src": "1269:42:1"
                       }
@@ -1253,18 +1253,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 763,
+                    "id": 810,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 760,
+                      "id": 807,
                       "name": "i",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 757,
+                      "referencedDeclaration": 804,
                       "src": "1154:1:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1277,18 +1277,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 761,
+                        "id": 808,
                         "name": "_analysisTypes",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 736,
+                        "referencedDeclaration": 783,
                         "src": "1158:14:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_analyseType_$697_memory_$dyn_memory_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_analyseType_$744_memory_$dyn_memory_ptr",
                           "typeString": "struct TraceableAnalysis.analyseType memory[] memory"
                         }
                       },
-                      "id": 762,
+                      "id": 809,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1308,18 +1308,18 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 782,
+                  "id": 829,
                   "initializationExpression": {
                     "assignments": [
-                      757
+                      804
                     ],
                     "declarations": [
                       {
                         "constant": false,
-                        "id": 757,
+                        "id": 804,
                         "name": "i",
                         "nodeType": "VariableDeclaration",
-                        "scope": 782,
+                        "scope": 829,
                         "src": "1139:9:1",
                         "stateVariable": false,
                         "storageLocation": "default",
@@ -1328,7 +1328,7 @@
                           "typeString": "uint256"
                         },
                         "typeName": {
-                          "id": 756,
+                          "id": 803,
                           "name": "uint256",
                           "nodeType": "ElementaryTypeName",
                           "src": "1139:7:1",
@@ -1341,11 +1341,11 @@
                         "visibility": "internal"
                       }
                     ],
-                    "id": 759,
+                    "id": 806,
                     "initialValue": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 758,
+                      "id": 805,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1366,7 +1366,7 @@
                   "loopExpression": {
                     "expression": {
                       "argumentTypes": null,
-                      "id": 765,
+                      "id": 812,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1377,11 +1377,11 @@
                       "src": "1181:3:1",
                       "subExpression": {
                         "argumentTypes": null,
-                        "id": 764,
+                        "id": 811,
                         "name": "i",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 757,
+                        "referencedDeclaration": 804,
                         "src": "1181:1:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1393,7 +1393,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 766,
+                    "id": 813,
                     "nodeType": "ExpressionStatement",
                     "src": "1181:3:1"
                   },
@@ -1403,7 +1403,7 @@
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 795,
+                    "id": 842,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1412,25 +1412,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 783,
+                        "id": 830,
                         "name": "cycles",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 715,
+                        "referencedDeclaration": 762,
                         "src": "1331:6:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_cycle_$711_storage_$",
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_cycle_$758_storage_$",
                           "typeString": "mapping(address => struct TraceableAnalysis.cycle storage ref)"
                         }
                       },
-                      "id": 785,
+                      "id": 832,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 784,
+                        "id": 831,
                         "name": "client",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 731,
+                        "referencedDeclaration": 778,
                         "src": "1338:6:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1444,7 +1444,7 @@
                       "nodeType": "IndexAccess",
                       "src": "1331:14:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_cycle_$711_storage",
+                        "typeIdentifier": "t_struct$_cycle_$758_storage",
                         "typeString": "struct TraceableAnalysis.cycle storage ref"
                       }
                     },
@@ -1455,11 +1455,11 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 787,
+                          "id": 834,
                           "name": "cyclesCounter",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 725,
+                          "referencedDeclaration": 772,
                           "src": "1367:13:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -1470,18 +1470,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 788,
+                            "id": 835,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1562,
+                            "referencedDeclaration": 1609,
                             "src": "1394:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 789,
+                          "id": 836,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1497,11 +1497,11 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 790,
+                          "id": 837,
                           "name": "client",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 731,
+                          "referencedDeclaration": 778,
                           "src": "1418:6:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -1510,11 +1510,11 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 791,
+                          "id": 838,
                           "name": "price",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 733,
+                          "referencedDeclaration": 780,
                           "src": "1438:5:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -1524,7 +1524,7 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "66616c7365",
-                          "id": 792,
+                          "id": 839,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1541,11 +1541,11 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 793,
+                          "id": 840,
                           "name": "analysisTypesIds",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 748,
+                          "referencedDeclaration": 795,
                           "src": "1476:16:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
@@ -1580,18 +1580,18 @@
                             "typeString": "uint256[] memory"
                           }
                         ],
-                        "id": 786,
+                        "id": 833,
                         "name": "cycle",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 711,
+                        "referencedDeclaration": 758,
                         "src": "1348:5:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_cycle_$711_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_cycle_$758_storage_ptr_$",
                           "typeString": "type(struct TraceableAnalysis.cycle storage pointer)"
                         }
                       },
-                      "id": 794,
+                      "id": 841,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1601,39 +1601,39 @@
                       "nodeType": "FunctionCall",
                       "src": "1348:154:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_cycle_$711_memory",
+                        "typeIdentifier": "t_struct$_cycle_$758_memory",
                         "typeString": "struct TraceableAnalysis.cycle memory"
                       }
                     },
                     "src": "1331:171:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_cycle_$711_storage",
+                      "typeIdentifier": "t_struct$_cycle_$758_storage",
                       "typeString": "struct TraceableAnalysis.cycle storage ref"
                     }
                   },
-                  "id": 796,
+                  "id": 843,
                   "nodeType": "ExpressionStatement",
                   "src": "1331:171:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 798,
+            "id": 845,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "addNewCycle",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 737,
+              "id": 784,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 731,
+                  "id": 778,
                   "name": "client",
                   "nodeType": "VariableDeclaration",
-                  "scope": 798,
+                  "scope": 845,
                   "src": "867:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1642,7 +1642,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 730,
+                    "id": 777,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "867:7:1",
@@ -1657,10 +1657,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 733,
+                  "id": 780,
                   "name": "price",
                   "nodeType": "VariableDeclaration",
-                  "scope": 798,
+                  "scope": 845,
                   "src": "891:13:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1669,7 +1669,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 732,
+                    "id": 779,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "891:7:1",
@@ -1683,36 +1683,36 @@
                 },
                 {
                   "constant": false,
-                  "id": 736,
+                  "id": 783,
                   "name": "_analysisTypes",
                   "nodeType": "VariableDeclaration",
-                  "scope": 798,
+                  "scope": 845,
                   "src": "914:35:1",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_analyseType_$697_memory_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_analyseType_$744_memory_$dyn_memory_ptr",
                     "typeString": "struct TraceableAnalysis.analyseType[]"
                   },
                   "typeName": {
                     "baseType": {
                       "contractScope": null,
-                      "id": 734,
+                      "id": 781,
                       "name": "analyseType",
                       "nodeType": "UserDefinedTypeName",
-                      "referencedDeclaration": 697,
+                      "referencedDeclaration": 744,
                       "src": "914:11:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_analyseType_$697_storage_ptr",
+                        "typeIdentifier": "t_struct$_analyseType_$744_storage_ptr",
                         "typeString": "struct TraceableAnalysis.analyseType"
                       }
                     },
-                    "id": 735,
+                    "id": 782,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "914:13:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_analyseType_$697_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_analyseType_$744_storage_$dyn_storage_ptr",
                       "typeString": "struct TraceableAnalysis.analyseType[]"
                     }
                   },
@@ -1723,12 +1723,12 @@
               "src": "822:133:1"
             },
             "returnParameters": {
-              "id": 738,
+              "id": 785,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "963:0:1"
             },
-            "scope": 823,
+            "scope": 870,
             "src": "802:707:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1736,7 +1736,7 @@
           },
           {
             "body": {
-              "id": 809,
+              "id": 856,
               "nodeType": "Block",
               "src": "1590:37:1",
               "statements": [
@@ -1745,25 +1745,25 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 805,
+                      "id": 852,
                       "name": "cycles",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 715,
+                      "referencedDeclaration": 762,
                       "src": "1607:6:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_cycle_$711_storage_$",
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_cycle_$758_storage_$",
                         "typeString": "mapping(address => struct TraceableAnalysis.cycle storage ref)"
                       }
                     },
-                    "id": 807,
+                    "id": 854,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 806,
+                      "id": 853,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 800,
+                      "referencedDeclaration": 847,
                       "src": "1614:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -1777,34 +1777,34 @@
                     "nodeType": "IndexAccess",
                     "src": "1607:13:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_cycle_$711_storage",
+                      "typeIdentifier": "t_struct$_cycle_$758_storage",
                       "typeString": "struct TraceableAnalysis.cycle storage ref"
                     }
                   },
-                  "functionReturnParameters": 804,
-                  "id": 808,
+                  "functionReturnParameters": 851,
+                  "id": 855,
                   "nodeType": "Return",
                   "src": "1600:20:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 810,
+            "id": 857,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getCycle",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 801,
+              "id": 848,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 800,
+                  "id": 847,
                   "name": "owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 810,
+                  "scope": 857,
                   "src": "1533:13:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1813,7 +1813,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 799,
+                    "id": 846,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1533:7:1",
@@ -1830,31 +1830,31 @@
               "src": "1532:15:1"
             },
             "returnParameters": {
-              "id": 804,
+              "id": 851,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 803,
+                  "id": 850,
                   "name": "result",
                   "nodeType": "VariableDeclaration",
-                  "scope": 810,
+                  "scope": 857,
                   "src": "1569:19:1",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_cycle_$711_memory_ptr",
+                    "typeIdentifier": "t_struct$_cycle_$758_memory_ptr",
                     "typeString": "struct TraceableAnalysis.cycle"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 802,
+                    "id": 849,
                     "name": "cycle",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 711,
+                    "referencedDeclaration": 758,
                     "src": "1569:5:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_cycle_$711_storage_ptr",
+                      "typeIdentifier": "t_struct$_cycle_$758_storage_ptr",
                       "typeString": "struct TraceableAnalysis.cycle"
                     }
                   },
@@ -1864,7 +1864,7 @@
               ],
               "src": "1568:21:1"
             },
-            "scope": 823,
+            "scope": 870,
             "src": "1515:112:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -1872,7 +1872,7 @@
           },
           {
             "body": {
-              "id": 821,
+              "id": 868,
               "nodeType": "Block",
               "src": "1745:41:1",
               "statements": [
@@ -1881,25 +1881,25 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 817,
+                      "id": 864,
                       "name": "analysisTypes",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 723,
+                      "referencedDeclaration": 770,
                       "src": "1762:13:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_analyseType_$697_storage_$",
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_analyseType_$744_storage_$",
                         "typeString": "mapping(uint256 => struct TraceableAnalysis.analyseType storage ref)"
                       }
                     },
-                    "id": 819,
+                    "id": 866,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 818,
+                      "id": 865,
                       "name": "id",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 812,
+                      "referencedDeclaration": 859,
                       "src": "1776:2:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1913,34 +1913,34 @@
                     "nodeType": "IndexAccess",
                     "src": "1762:17:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_analyseType_$697_storage",
+                      "typeIdentifier": "t_struct$_analyseType_$744_storage",
                       "typeString": "struct TraceableAnalysis.analyseType storage ref"
                     }
                   },
-                  "functionReturnParameters": 816,
-                  "id": 820,
+                  "functionReturnParameters": 863,
+                  "id": 867,
                   "nodeType": "Return",
                   "src": "1755:24:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 822,
+            "id": 869,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getAnalyseType",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 813,
+              "id": 860,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 812,
+                  "id": 859,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 822,
+                  "scope": 869,
                   "src": "1657:10:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1949,7 +1949,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 811,
+                    "id": 858,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1657:7:1",
@@ -1965,31 +1965,31 @@
               "src": "1656:12:1"
             },
             "returnParameters": {
-              "id": 816,
+              "id": 863,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 815,
+                  "id": 862,
                   "name": "result",
                   "nodeType": "VariableDeclaration",
-                  "scope": 822,
+                  "scope": 869,
                   "src": "1714:25:1",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_analyseType_$697_memory_ptr",
+                    "typeIdentifier": "t_struct$_analyseType_$744_memory_ptr",
                     "typeString": "struct TraceableAnalysis.analyseType"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 814,
+                    "id": 861,
                     "name": "analyseType",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 697,
+                    "referencedDeclaration": 744,
                     "src": "1714:11:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_analyseType_$697_storage_ptr",
+                      "typeIdentifier": "t_struct$_analyseType_$744_storage_ptr",
                       "typeString": "struct TraceableAnalysis.analyseType"
                     }
                   },
@@ -1999,14 +1999,14 @@
               ],
               "src": "1713:27:1"
             },
-            "scope": 823,
+            "scope": 870,
             "src": "1633:153:1",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 824,
+        "scope": 871,
         "src": "67:1721:1"
       }
     ],
