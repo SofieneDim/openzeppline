@@ -8,7 +8,7 @@ contract Authentication {
         string userName;
         string email;
         string phoneNumber;
-        string password;
+        string responsableName;
         string logoLink;
         string country;
         bool labo;
@@ -178,15 +178,39 @@ contract Authentication {
             false
         );
     }
-
+    
     function blockUser(uint256 clientId) public {
         require(adminAccounts[msg.sender], "You are not admin");
-        accounts[clientId].blocked = true;
+        account memory userAccount = accounts[clientId];
+        accounts[clientId] = account(
+            userAccount.id,
+            userAccount.owner,
+            userAccount.userName,
+            userAccount.email,
+            userAccount.phoneNumber,
+            userAccount.responsableName,
+            userAccount.logoLink,
+            userAccount.country,
+            userAccount.labo,
+            true
+        );
     }
 
     function unblockUser(uint256 clientId) public {
         require(adminAccounts[msg.sender], "You are not admin");
-        accounts[clientId].blocked = false;
+        account memory userAccount = accounts[clientId];
+        accounts[clientId] = account(
+            userAccount.id,
+            userAccount.owner,
+            userAccount.userName,
+            userAccount.email,
+            userAccount.phoneNumber,
+            userAccount.responsableName,
+            userAccount.logoLink,
+            userAccount.country,
+            userAccount.labo,
+            true
+        );
     }
 
     function checkRequest(address _address)
