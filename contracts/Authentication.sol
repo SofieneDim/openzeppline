@@ -19,7 +19,7 @@ contract Authentication {
         address owner;
         uint256 id;
         string date;
-        string name;
+        string userName;
         string email;
         string phoneNumber;
         string responsableName;
@@ -111,7 +111,7 @@ contract Authentication {
             request.owner,
             request.id,
             request.date,
-            request.name,
+            request.userName,
             request.phoneNumber,
             request.email,
             request.responsableName,
@@ -124,7 +124,7 @@ contract Authentication {
             request.owner,
             request.id,
             request.date,
-            request.name,
+            request.userName,
             request.phoneNumber,
             request.email,
             request.responsableName,
@@ -137,7 +137,7 @@ contract Authentication {
         accounts[accountsCounter] = account(
             accountsCounter,
             request.owner,
-            request.name,
+            request.userName,
             request.email,
             request.phoneNumber,
             request.responsableName,
@@ -155,7 +155,7 @@ contract Authentication {
             request.owner,
             request.id,
             request.date,
-            request.name,
+            request.userName,
             request.phoneNumber,
             request.email,
             request.responsableName,
@@ -168,7 +168,7 @@ contract Authentication {
             request.owner,
             request.id,
             request.date,
-            request.name,
+            request.userName,
             request.phoneNumber,
             request.email,
             request.responsableName,
@@ -178,25 +178,8 @@ contract Authentication {
             false
         );
     }
-    
-    function blockUser(uint256 clientId) public {
-        require(adminAccounts[msg.sender], "You are not admin");
-        account memory userAccount = accounts[clientId];
-        accounts[clientId] = account(
-            userAccount.id,
-            userAccount.owner,
-            userAccount.userName,
-            userAccount.email,
-            userAccount.phoneNumber,
-            userAccount.responsableName,
-            userAccount.logoLink,
-            userAccount.country,
-            userAccount.labo,
-            true
-        );
-    }
 
-    function unblockUser(uint256 clientId) public {
+    function manageUserPermission(uint256 clientId, bool blockUser) public {
         require(adminAccounts[msg.sender], "You are not admin");
         account memory userAccount = accounts[clientId];
         accounts[clientId] = account(
@@ -209,7 +192,7 @@ contract Authentication {
             userAccount.logoLink,
             userAccount.country,
             userAccount.labo,
-            true
+            blockUser
         );
     }
 

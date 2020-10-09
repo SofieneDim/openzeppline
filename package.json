@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "push": "git add . && git commit -m 'block labo in progress' && git push origin master"
+    "push": "git add . && git commit -m 'auto push' && git push origin master"
   },
   "keywords": [],
   "author": "",
