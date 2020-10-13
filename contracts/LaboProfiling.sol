@@ -4,8 +4,9 @@ pragma solidity >0.4.99 <0.6.0;
 contract LaboProfiling {
     struct laboProfile {
         uint256 id;
-        uint256[] machinesIds;
         string gestionType;
+        uint256[] machinesIds;
+        uint256[] humansResourcesIds;
     }
 
     struct machine {
@@ -26,6 +27,14 @@ contract LaboProfiling {
     mapping(uint256 => laboProfile) private labosProfiles;
     mapping(uint256 => humanResource) private humansResources;
 
+    function getProfile(uint256 laboId)
+        public
+        view
+        returns (laboProfile memory)
+    {
+        return labosProfiles[laboId];
+    }
+
     function addMachine(
         uint256 laboId,
         string memory serialNumber,
@@ -36,11 +45,22 @@ contract LaboProfiling {
         labosProfiles[laboId].machinesIds.push(machinesCounter);
     }
 
-    function getProfile(uint256 laboId)
-        public
-        view
-        returns (laboProfile memory)
-    {
-        return labosProfiles[laboId];
+    function addHumanResource(
+        uint256 laboId,
+        string memory fullName,
+        string memory role,
+        string memory email
+    ) public {
+        humanResourceCounter++;
+        humansResources[humanResourceCounter] = humanResource(
+            fullName,
+            role,
+            email
+        );
+        labosProfiles[laboId].humansResourcesIds.push(humanResourceCounter);
+    }
+
+    function editGestionType(uint256 laboId, string memory gestionType) public {
+        labosProfiles[laboId].gestionType = gestionType;
     }
 }
