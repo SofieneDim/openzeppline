@@ -1,7 +1,6 @@
 {
   "name": "oz",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "push": "git add . && git commit -m 'auto push' && git push origin master"
@@ -10,6 +9,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@openzeppelin/cli": "^2.8.2"
-  }
+    "@openzeppelin/cli": "^2.8.2",
+    "@openzeppelin/contracts": "^3.2.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SofieneDim/openzeppline.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SofieneDim/openzeppline/issues"
+  },
+  "homepage": "https://github.com/SofieneDim/openzeppline#readme",
+  "description": ""
 }
